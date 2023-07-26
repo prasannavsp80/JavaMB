@@ -218,6 +218,102 @@ class Quiz3 {
     }
 }
 
+public class P1 {
+public static void main(String[] args) {
+int i=10;
+       // int j=i++;
+int j = ++i;
+System.out.println(i + " " +j);
+    }
+}
+
+public class Ex3 {
+
+public static void main(String[] args) {
+       String month;
+month = "Feb";
+switch(month) {
+case "Feb" : System.out.println("Hi");
+case "Mar" : System.out.println("Hello");
+case "Apr" : System.out.println("Bye");
+case "May" : System.out.println("Test");
+default :
+System.out.println("Default");
+       }
+    }
+}
+
+Looping Control Structures : 
+_____________________________
+
+while loop : 
+
+	This loop executes all the statement(s) repeatedly until the condition remains true, if the condition remains false, it comes out of the loop. 
+
+For every loop, basically there are 3 phases as 
+
+	(i) Initialization
+
+	(ii) Condition
+
+	(iii) Increment/Decrement 
+
+Initialization performed at the beginning of the loop. 
+
+Condition performed at the conditinal part of the loop.
+
+Increment/Decrement performed before closing the loop. 
+
+while(condition) {
+   statement(s);
+}
+
+for loop : Executes the statements repeatedly until the condition remains true, if the condition remains false, then it comes out of the loop. 
+
+for(initialization;condition;increment/decrement) {
+    statement(s);
+}
+
+
+Arrays : An array is the finite ordered set of homogeneous elements, means all the elements belongs to same data type. 
+
+All elements of array are stored in successive memory locations. 
+
+int[] a = new int[]{34,21,43,14};
+
+then
+
+a[0]=34
+a[1]=21
+a[2]=43
+a[3]=14
+
+	int[] a = new int[] {42,11,54,12,231};
+//		for(int i=0;i<a.length;i++) {
+//			System.out.println(a[i]);
+//		}
+		
+		for (int i : a) {
+			System.out.println(i);
+		}
+
+interal execution of foreach loop, 
+
+in above code at first i points to the first element in array a, after processing first element, it checks next element is there or not by using hasMoreElements(), if it returns true, it moves to the next element by using nextElement(), it repeats as soon as it returns false. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
