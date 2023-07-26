@@ -1,0 +1,10 @@
+package com.java.day1;
+
+public class Data {
+
+	public void greeting() {
+		System.out.println("Welcome to Java Programming...");
+	}
+	
+	
+}
