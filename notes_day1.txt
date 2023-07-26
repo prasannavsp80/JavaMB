@@ -143,6 +143,83 @@ If you have class as Data then
 
 Data obj = new Data();
 
+Control Structures : 
+____________________
+
+Used to define the flow of the program.  
+
+There are 2 types of control structures known as
+
+(i) Branching
+
+	if...else : 
+
+		Executes the statement(s) based on the condition. 
+
+		if (condition) {
+		   statement(s);		
+		} else {
+		   statement(s);
+		}
+
+	switch...case : Used to define menu-driven prog.
+
+	switch(expression) {
+		case expr1 : 
+			statement(s);
+			break;	
+		case expr2 : 
+			statement(s);
+			break;
+		case expr3 : 
+			statement(s);
+			break;
+		...
+		...
+		...
+
+		default : 
+		    statement(s);
+	}
+(ii) Looping
+
+
+https://github.com/prasannavsp80/JavaMB
+
+Write a program using Switch...case 
+
+	as accept input as grade 
+
+if grade is 'a' or 1 or 'A' print Excellent
+if grade is 'b' or 2 or 'B' print Good
+if grade is 'c' or 3 or 'C' print Adequate
+if grade is 'd' or 4 or 'D' print inadequate 
+
+
+class Quiz1 {
+    pubilc static void main(String[] args) {
+	int ch='A';
+	System.out.println(ch);
+   }
+}
+
+class Quiz2 {
+    pubilc static void main(String[] args) {
+	int x;
+	System.out.println(x);
+   }
+}
+
+class Quiz3 {
+    public static void main(String[] args) {
+	System.out.println("5" +3+8); // 538
+	System.out.println("5"+(3+8)); // 511
+	System.out.println("5+3"+8); // 5 + 38
+    }
+}
+
+
+
 
 
 
