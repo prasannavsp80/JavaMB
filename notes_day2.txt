@@ -208,6 +208,74 @@ class Factory {
    Mobile showInfo();
 }
 
+interface : Java does not support the concept of multiple inheritance, to achieve this we need the help of interfaces. An interface contains method declaration, and the implementation can be done in the corresponding class.  You can add more than one interface to the particular class. 
+
+interface interface_name {
+   method(s);
+}
+
+interface will be added to the class by using implements Keyword. 
+
+What is the difference between interface and abstract class : 
+_______________________________________________________________
+
+	-> An abstract class contains both abstract and non-abstract method(s), where interface contains only abstract method(s).
+
+	-> interface methods are public and abstract by default. 
+
+	-> Multiple Inheritance can be possible by using interfaces
+
+	-> An interface can be called from anywhere to anywhere. 
+
+
+_____________________________________________________________
+
+interface One {
+  void show();
+}
+
+interface Two {
+  void show();
+}
+
+interface Three {
+  void show();
+}
+
+class Hello implements One, Two, Three {
+
+}
+
+_______________________________________________________________________
+
+class Hello {
+    public static void main(String[] args) {
+	Hello obj = new Hello();
+	System.out.println(obj);
+    }
+}
+
+
+class Hello {
+    public static void main(String[] args) {
+	System.out.println(args[0] + " " + args[2]);
+    }
+}
+
+Args are : hello hi test 
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 
