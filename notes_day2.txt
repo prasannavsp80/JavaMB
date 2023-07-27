@@ -190,6 +190,23 @@ A class, that which can be created, but not implemented and instantiated known a
 
 You cannot create an object to the abstract class. 
 
+abstract class Mobile
+{
+    void type();
+    void name();
+}
+class Samsung extends Mobile {
+...
+...
+}
+class IPhone extends Mobile {
+...
+...
+}
+
+class Factory {
+   Mobile showInfo();
+}
 
 	
 
