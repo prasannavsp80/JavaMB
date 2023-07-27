@@ -1,0 +1,112 @@
+strings : Strings are immutable.  as we cannot change the value by using any string methods. 
+
+public static void main(String[] args) {
+   String str="Hello";
+   str.concat(" World");
+   System.out.println(str);
+}
+
+
+int x;
+
+x=12.5;
+x=12;
+x="Hello";
+
+Object x;
+
+x=12.5;
+x=12;
+x="Hello";
+
+Boxing and Unboxing : 
+
+The concept of converting value types to reference types known as boxing, and reference types to value types known as unboxing. 
+
+Object is type, that which can be used for boxing and unboxing. 
+
+What is the default package in java
+
+java.lang
+
+What is the top level class in java 
+
+Object 
+
+this class contains various methods as
+
+	-> hashCode()
+	-> getClass()
+	-> toString()
+	-> equals()
+
+Method Overloading : 
+
+The concept of using the same method w.r.t. different data types or different no.of parameters konwn as method overloading... Here the method name must be same, but no.of parameters or type of parameters we are using here are different. 
+
+
+class Test {
+   int a,b;
+   a=5;
+   b=7;
+}
+
+Constructor : A constructor is a special member, which used to initialize the member variables of the class, it is special because it has the same name as that of class name. 
+
+Rules : 
+_______
+
+	-> It will not contains any return type
+
+	-> It will not return any value
+
+	-> It will be invoked automatically once the instance of the class created
+
+	-> A constructor can be overloaded. 
+
+Types of Constructors : 
+_________________________
+
+We have 2 types of constructors known as 
+
+(i) static constructors : 
+
+There are called class constructors which are used to initlize the static variables of the class, these constructros are invoked automatically before control reaches the entry point. static constructors cannot be overloaded. *** Java don't have static constructor, as static { } acts as static constructor ***
+
+(ii) instance constructors 
+
+	These are the constructors that which are invoked automatically once the instance of the class created.  These constructors can be overloaded. 
+
+static variables : 
+
+These are the class variables that which retains values irrespective of type of object. 
+
+
+class Hello {
+
+    public void show(int x) {
+	System.out.println("Hi " +x);
+    }
+    public void show(Object x) {
+ 	System.out.println("Object " +x);
+    }
+
+    public static void main(String[] args) {
+	Hello obj = new Hello();
+        obj.show(12);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
