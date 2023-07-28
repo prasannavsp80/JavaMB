@@ -19,18 +19,18 @@ ________________________________________________________________________________
 3)	What is the return type for constructor
 ___________________________________________________________________________________
 
-7)	Final class 
+4)	Final class 
 a)	Can be inherited
 b)	Cannot be inherited
 c)	Cannot create an object
 d)	Cannot have constructor
 
 ___________________________________________________________________________________
-4) What is the output
+5) What is the output
 int[] a=new int[6];
 a[10]=66;
 ___________________________________________________________________________________
-5) public class Ex2 {
+6) public class Ex2 {
 int a=18;
 public static void show() {
 System.out.println("Age  " +a);
@@ -41,29 +41,14 @@ new Ex2().show();
 }
 
 ___________________________________________________________________________________
-6) Identify which statements are true or false
+7) Identify which statements are true or false
 
 Overloaded methods should differ in arg list 
 Overloaded methods may differ in return type 
 Overloaded methods may differ in access specifier
 
 ___________________________________________________________________________________
-7) public class Ex3 {
-
-public static void main(String[] args) {
-       String month;
-month = "Feb";
-switch(month) {
-case "Feb" : System.out.println("Hi");
-case "Mar" : System.out.println("Hello");
-case "Apr" : System.out.println("Bye");
-case "May" : System.out.println("Test");
-default :
-System.out.println("Default");
-       }
-    }
-}
-_________________________________________________________________________________________________
+______________
 
 8) What would be output for
 class Test {
