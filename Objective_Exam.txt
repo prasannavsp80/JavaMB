@@ -1,0 +1,281 @@
+1)	What is output
+public class P1 {
+public static void main(String[] args) {
+int i=10;
+       // int j=i++;
+int j = ++i;
+System.out.println(i + " " +j);
+    }
+}
+___________________________________________________________________________________
+
+2)	What is the output for
+int[] a = new int[]{12,4,6,33,23};
+for(int i : a) {
+System.out.println(a);
+}
+
+___________________________________________________________________________________
+3)	What is the return type for constructor
+___________________________________________________________________________________
+
+7)	Final class 
+a)	Can be inherited
+b)	Cannot be inherited
+c)	Cannot create an object
+d)	Cannot have constructor
+
+___________________________________________________________________________________
+4) What is the output
+int[] a=new int[6];
+a[10]=66;
+___________________________________________________________________________________
+5) public class Ex2 {
+int a=18;
+public static void show() {
+System.out.println("Age  " +a);
+    }
+public static void main(String[] args) {
+new Ex2().show();
+    }
+}
+
+___________________________________________________________________________________
+6) Identify which statements are true or false
+
+Overloaded methods should differ in arg list 
+Overloaded methods may differ in return type 
+Overloaded methods may differ in access specifier
+
+___________________________________________________________________________________
+7) public class Ex3 {
+
+public static void main(String[] args) {
+       String month;
+month = "Feb";
+switch(month) {
+case "Feb" : System.out.println("Hi");
+case "Mar" : System.out.println("Hello");
+case "Apr" : System.out.println("Bye");
+case "May" : System.out.println("Test");
+default :
+System.out.println("Default");
+       }
+    }
+}
+_________________________________________________________________________________________________
+
+8) What would be output for
+class Test {
+void tests() {
+System.out.println("Hi");
+    }
+}
+
+class Fest extends Test {
+static void tests() {
+System.out.println("Bye");
+    }
+}
+public class Ex3 {
+
+public static void main(String[] args) { // line 4
+     Test obj = new Test();
+obj.tests();
+    }
+}
+
+___________________________________________________________________________________
+9)
+
+What would be output for the below code
+public class Ex3 {
+static Ex3() { System.out.println("Hello");}
+public static void main(String[] args) { 
+System.out.println("Hi");
+    }
+}
+
+___________________________________________________________________________________
+10) What would be output
+public class Ex3 {
+
+public static void main(String[] args) { 
+        String s1="abc";
+        String s2="abc";
+System.out.println(s1==s2);
+System.out.println(s1.equals(s2));
+    }
+}
+
+___________________________________________________________________________________________________
+
+11) To access a method in same package and other package derived classes, which modifier(s) we want
+___________________________________________________________________________________12) public class Ex3 {
+
+public Ex3() {}
+public static void main(String[] args) { 
+    }
+}
+What is public Ex3() here
+____________________________________________________________
+
+
+13) 
+What would be output
+public class Ex3 {
+
+static {
+System.out.println("Hi");
+  }
+static {
+System.out.println("Bye");
+  }
+  public static void main(String[] args) { }
+}
+
+
+14)
+
+public class P9 {
+    static int count=0;
+   public void increment()
+   {
+       count++;
+   }
+   public static void main(String args[])
+   {
+       P9 obj1=new P9();
+       P9 obj2=new P9();
+       obj1.increment();
+       obj2.increment();
+       System.out.println("Obj1: count is="+obj1.count);
+
+       System.out.println("Obj2: count is="+obj2.count);
+   }
+}
+
+___________________________________________________________________________________
+15) What would be output for
+
+public class Hello extends String {
+public static void main(String[] args) {
+System.out.println("Hello World...");
+  }
+}
+
+___________________________________________________________________________________
+
+16)
+class First {
+    public void show(int x) {
+        System.out.println("Hello " +x);
+    }
+
+    public int show(int x, int y) {
+        return x+y;
+    }
+}
+
+class Second extends First {
+     public int show(int x) {
+        return x;
+     }
+    public int show(int x,int y, int z) {
+        return x+y+z;
+    }
+}
+
+public class Quiz8 {
+    public static void main(String[] args) {
+        new Second().show(12,77,567);
+    }
+}
+_______________________________________________________________________________
+
+17)
+
+class First {
+    private int x=12;
+    protected String name = "Welcome";
+    public String company = "Company";
+}
+public class Quiz9 {
+    public static void main(String[] args) {
+        First obj = new First();
+        System.out.println(obj.x);
+        System.out.println(obj.name);
+        System.out.println(obj.company);
+    }
+}
+___________________________________________________________________________
+
+18)
+
+public class Quiz11 {
+    static int x;
+    public void incr() {
+        ++x;
+        System.out.println(x);
+    }
+    public static void main(String[] args) {
+        Quiz11 obj1 = new Quiz11();
+        Quiz11 obj2 = new Quiz11();
+        Quiz11 obj3 = new Quiz11();
+        obj1.incr();
+        obj2.incr();
+        obj3.incr();
+    
+    }
+}
+
+________________________________________________________________________________________
+
+19)
+class First {
+    public void show(int x) {
+        System.out.println("Hello " +x);
+    }
+}
+
+class Second extends First {
+    public int show(int x) {
+        return x+5;
+    }
+}
+
+public class Quiz21 {
+    public static void main(String[] args) {
+        new Second().show(12);
+    }
+}
+________________________________________________________________________________________
+
+20)
+public class Quiz99 {
+    public static void main(String[] args) {
+        System.out.println("HI");
+    }
+    public static void main() {
+        System.out.println("Bye");
+    }
+}
+________________________________________________________________________________________
+
+21)
+public class P2 {
+    public void show(Object ob) {
+        if (ob == "ABC") {
+            System.out.println("Correct A AND D");
+        } else {
+            System.out.println("Error B AND C");
+        }
+    }
+    public static void main(String[] args) {
+        String s="ABC";
+        // int a = 2;
+        P2 obj=new P2();
+        obj.show(s);
+    }
+}
+___________________________________________________________________________________
