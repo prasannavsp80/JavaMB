@@ -1,0 +1,74 @@
+Exception Handling : 
+______________________
+
+It is a mechanism of handling the runtime errors during execution of the program. 
+
+There are 2 types of errors as 
+
+	(i) Compile Time
+
+	(ii) Runtime 
+
+By using Exception Handling, we can overcome the runtime errors. 
+
+To handle errors we have 3 blocks. 
+
+1) try block : This block contains statment(s) in which there is possibility of getting runtime errors. The statements which are placed in this block are treated as heavy weighted statement(s) as JVM allocates excess memory to them. 
+
+2) catch block : Once exception raised in try block, then the control will be forwarded to catch block, this block contains alternate statement(s) for exceptions raised in try block. I try block can contains multiple catch blocks. 
+
+3) finally block : This block contains statement(s) that needs to be executed mandetorily irrespective of try and catch blocks, this block is not mandetory, but all the statement(s) which are placed in this block are executed as mandetory statement(s). 
+
+try {
+...
+...
+...
+} catch (Exception e) {
+...
+...
+...
+} finally {
+...
+...
+...
+}
+
+Exception is the top most class from which all kinds of exceptions are derived. 
+
+There are 2 types of exceptions known as 
+
+	(i) Checked Exceptions : These are the exceptions that which occurs at compile time, during compilation JVM feels some erroneous code, and stops the execution at compile time, can be handled at method level by using throws keyword. 
+
+	(ii) Unchecked Exceptions 
+
+System Exceptions are inadequate to handle all situations, to overcome this we need the help of Custom Exceptions.  Any class, that which derived from exceptions can be treated as Custom Exception. 
+
+class class_name extends Exception {
+    ...
+    ...
+    ...
+}
+
+
+Write a Program to accept age, check he/she elligible for voting or not, if not throw User-Defined exception as VotingException. 
+
+Write a Program to accept email (as string) if it does not contain '@' throw InvalidEmailException, else print the email. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
