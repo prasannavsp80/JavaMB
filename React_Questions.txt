@@ -1,0 +1,113 @@
+1) JSX stands for 
+
+
+2) How to create a react project 
+
+
+3) How to create a component 
+
+
+4) Which file contains all the dependencices of react project
+
+
+5) Which port react project runs by default 
+
+
+6) How to change the default port in react 
+
+7) What is Oneway binding in react 
+
+8) What is meant by virtual dom
+
+9) Which file is responsible to display the contents of react project
+
+app.js
+
+10) How to upload any component in react 
+
+11) What is the purpose of render method
+
+12) Specify the syntax for ReactDom.Render()
+
+
+
+13) Which file contains the ReactDom.Render() 
+
+
+14) Which file loaded once you run the react application
+
+
+15) You have a variable as topic="React", how to print the value 
+
+
+17) Arrow Functions
+
+hello = (val) => "Hello " + val;
+
+18) How to declare variables in react 
+
+
+19) How to call a component in app.js file, assume we have a component as First, then how you will call
+
+20) JSX syntax 
+
+
+21) What is the purpose of Props and how to implement them practically
+
+
+
+22) What is React State, and how to implement React State 
+
+23) Syntax for Defining State :
+
+
+24) How to identify and change state in textbox/button/dropdown
+
+
+
+25) How to render the events in react
+
+26) 
+In handleChange, please specify as 
+
+    handleChange(event) {
+      this.setState({value: event.target.value});
+      alert('Selected Student Name is : ' + this.state.value);
+    }
+
+
+27) React LifeCycle hooks 
+28) How to enable routing in react 
+
+29) How to handle Routing in react 
+
+
+30) What are the imports used for react routing
+
+
+
+31) Specify the structure/path to implement Routing 
+
+
+
+32) How to Specify the Default Route in React
+
+33) How to Redirect to error component 
+
+34) How to Redirect to component using <Link> tag
+35) How to redirect to the component programatically 
+
+36) How to pass values from the React Component 
+
+
+37) How to display the property value in component 
+
+
+38) How to Pass values using button Click
+ 
+39) How to install axios
+
+40) How to import axios in your given component
+
+41) what is axios
+
