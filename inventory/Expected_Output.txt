@@ -1,0 +1,9 @@
+Quantity ordered : 5 Order ID : 1
+Product : Laptop Quantity Available : 20 Price : 20000
+Total Amount=100000
+Quantity ordered : 27 Order ID : 2
+Product : Mobile Quantity Available : 10 Price : 25000
+Insufficient Products....
+Quantity ordered : 11 Order ID : 3
+Product : Laptop Quantity Available : 20 Price : 20000
+Total Amount=220000
