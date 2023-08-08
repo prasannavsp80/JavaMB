@@ -20,4 +20,8 @@
 </bean>
 <bean name="employeeServiceByName" class="com.java.spr.EmployeeService" autowire="byName" />
 <bean name="employeeAutowiredByTypeService" class="com.java.spr.EmployeeAutoWireByType" />
+
+<context:annotation-config />
+
+<bean name="employeeConstructor" class="com.java.spr.EmployeeAutowiredConstructor" />
 </beans>
