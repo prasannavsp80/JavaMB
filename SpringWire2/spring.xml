@@ -10,23 +10,14 @@
 	<property name="name" value="Prasanna"></property>
 </bean>
 
+
+<bean name="employee2" class="com.java.spr.Employee">
+	<property name="name" value="Raj"></property>
+</bean>
+
 <bean name="employee1" class="com.java.spr.Employee" autowire-candidate="false">
 	<property name="name" value="Pankaj"></property>
 </bean>
-
-<!-- autowiring byName, bean name should be same as the property name -->
 <bean name="employeeServiceByName" class="com.java.spr.EmployeeService" autowire="byName" />
-
-<!-- autowiring byType, there should be only one bean definition for the mapping -->
-<bean name="employeeServiceByType" class="com.java.spr.EmployeeService" autowire="byType" />
-
-<!-- autowiring by constructor -->
-<bean name="employeeServiceConstructor" class="com.java.spr.EmployeeService" autowire="constructor" />
-
-<!-- Enable Annotation based configuration -->
-<context:annotation-config />
-
-<!-- using @Autowiring annotation in below beans, byType and constructor -->
-<bean name="employeeAutowiredByTypeService" class="com.java.spr.EmployeeAutowiredByTypeService" />
-<bean name="employeeAutowiredByConstructorService" class="com.java.spr.EmployeeAutowiredByConstructorService" />
+<bean name="employeeAutowiredByTypeService" class="com.java.spr.EmployeeAutoWireByType" />
 </beans>
