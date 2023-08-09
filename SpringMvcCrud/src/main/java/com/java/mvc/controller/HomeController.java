@@ -17,6 +17,22 @@ public class HomeController {
 	@Autowired
 	EmployDAOImpl dao;
 	
+	@RequestMapping(value="/updateEmploy")
+	public ModelAndView updateEmploy(HttpServletRequest req) {
+		Employ employ = new Employ();
+		employ.setEmpno(Integer.parseInt(req.getParameter("empno")));
+		employ.setName(req.getParameter("name"));
+		employ.setDept(req.getParameter("dept"));
+		employ.setDesig(req.getParameter("desig"));
+		employ.setBasic(Integer.parseInt(req.getParameter("basic")));
+		System.out.println(employ);
+		dao.updateEmployDao(employ);
+		//return new ModelAndView("home");
+		return new ModelAndView("redirect:/");
+	}
+
+
+	
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
 		List<Employ> employList = dao.showEmployDao();
@@ -28,6 +44,13 @@ public class HomeController {
 		int empno = Integer.parseInt(req.getParameter("empno"));
 		Employ employ = dao.searchEmployDao(empno);
 		return new ModelAndView("employsearchform","employ",employ);
+	}
+	
+	@RequestMapping(value="/deleteemploy")
+	public ModelAndView delete(HttpServletRequest req) {
+		int empno = Integer.parseInt(req.getParameter("empno"));
+		dao.deleteEmployDao(empno);
+		return new ModelAndView("redirect:/");
 	}
 
 	@RequestMapping(value="/createEmploy")

@@ -17,6 +17,7 @@
 				<th>Designation</th>
 				<th>Basic</th>
 				<th>Update</th>
+				<th>Delete</th>
 			</tr>
 			<c:forEach var="employ" items="${employList}">
 				<tr>
@@ -28,7 +29,9 @@
 					<td>
        			<a href="editemploy?empno=${employ.empno}">Edit</a>
         			</td>
-					
+						<td>
+       			<a href="deleteemploy?empno=${employ.empno}">Delete</a>
+        			</td>
 				</tr>
 				
 			</c:forEach>

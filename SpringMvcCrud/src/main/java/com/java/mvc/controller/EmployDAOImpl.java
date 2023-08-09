@@ -45,4 +45,26 @@ public class EmployDAOImpl implements EmployDAO {
 		employList.add(employ);
 		return "Record Inserted...";
 	}
+
+	@Override
+	public String deleteEmployDao(int empno) {
+		Employ employFound = searchEmployDao(empno);
+		employList.remove(employFound);
+		return "Record Deleted...";
+	}
+
+	@Override
+	public String updateEmployDao(Employ employNew) {
+		for (Employ employ : employList) {
+			if (employ.getEmpno()==employNew.getEmpno()) {
+				employ.setName(employNew.getName());
+				employ.setDept(employNew.getDept());
+				employ.setDesig(employNew.getDesig());
+				employ.setBasic(employNew.getBasic());
+				System.out.println("hi");
+				return "Updated...";
+			}
+		}
+		return "not found...";
+	}
 }

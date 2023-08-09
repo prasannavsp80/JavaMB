@@ -60,6 +60,12 @@ public class Employ {
 		this.basic = basic;
 	}
 
+	@Override
+	public String toString() {
+		return "Employ [empno=" + empno + ", name=" + name + ", dept=" + dept + ", desig=" + desig + ", basic=" + basic
+				+ "]";
+	}
+
 	
 	
 }
