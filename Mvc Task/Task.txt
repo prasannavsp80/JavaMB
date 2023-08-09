@@ -1,0 +1,9 @@
+1) leaveId to be generated Automatially
+
+2) leaveStartDate cannot be greater than leaveEndDate
+
+3) leaveAppliedOn must be today's date
+
+4) noOfDays to be calculated
+
+5) 
