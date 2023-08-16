@@ -1,0 +1,18 @@
+create table employNew
+(
+empno int primary key,
+name varchar2(30),
+gender varchar2(10),
+salary numeric(9,2)
+);
+
+insert into employNew values(1,'bhuvi','female',66778);
+insert into employNew values(2,'jai kishan','male',66798);
+insert into employNew values(3,'hari haran gopal','male',66779);
+insert into employNew values(4,'raj kishore','male',66770);
+insert into employNew values(5,'nalini manohar','female',66773);
+insert into employNew values(6,'aleena','female',77773);
+
+commit;
+
+
