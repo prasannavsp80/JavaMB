@@ -1,0 +1,95 @@
+rem *******  script to create tables for oracle book   ****************
+rem 
+rem 		   	Author : P.Srikanth
+rem  			Date   : 4-aug-2001 
+rem			place  : Vizag.
+rem 
+rem *******************************************************************
+
+
+rem --------- first drop all existing tables ------------------
+
+drop table payments cascade constraints;
+drop table students cascade constraints;
+drop table batches cascade constraints;
+drop table course_faculty cascade constraints;
+drop table faculty cascade constraints;
+drop table courses cascade constraints;
+
+
+create table  courses
+(
+   ccode	  varchar2(5)  constraint courses_pk  primary key,
+   Name	  varchar2(30) constraint courses_name_u unique,
+   Duration 	  number(3)    constraint courses_duration_chk  
+  check( duration >= 1),
+   fee          number(5)   constraint courses_fee_chk 
+  check( fee >= 0 ),
+   Prerequisite varchar2(100)
+);
+
+
+create table  faculty
+(
+   fCODE	Varchar2(5) constraint faculty_pk  primary key,
+   Name	varchar2(30),
+   qual	varchar2(30),
+   exp		Varchar2(100) 
+);
+
+
+create table  course_faculty
+(
+   fcode   varchar2(5) constraint course_faculty_fcode_fk 
+references faculty(fcode),
+   CCODE   Varchar2(5) constraint course_faculty_ccode_fk 
+references courses(ccode),
+   grade   char(1)  constraint course_faculty_grade_chk
+                           check ( upper(grade) in ('A','B','C') ),
+   constraint course_faculty_pk  primary key(ccode,fcode)
+);
+
+
+create table batches
+(
+   bCODE   Varchar2(5) constraint batches_pk primary key,
+   ccode   varchar2(5) constraint batches_ccode_fk 
+                         references courses(ccode),
+   fcode   varchar2(5) constraint baches_fcode_fk   
+            references faculty(fcode),
+   stdate  date 	   constraint batches_stdate_nn not null,
+   enddate date,
+   timing  number(1)   constraint batches_timing_chk  
+                           check( timing in (1,2,3) ),
+   constraint batches_dates_chk  check ( stdate <= enddate)
+);
+
+
+
+
+create table students
+(
+   rollno   number(5)   constraint students_pk primary key,
+   bcode    varchar2(5) constraint students_bcode_fk 
+references batches(bcode),
+   name     varchar2(30),
+   gender   char(1)      constraint students_gender_chk 
+                              check( upper(gender)  in ('M','F')),
+   dj       date,
+   phone    varchar2(10),
+   email    varchar2(30)
+);
+
+ 
+
+
+
+create table payments
+(
+   rollno    number(5) constraint payments_rollno_fk
+references students(rollno),
+   dp        date      constraint payments_dp_nn  not null,
+   amount    number(5) constraint payments_amount_chk 
+                                   check ( amount > 0 ),
+   constraint payments_pk primary key (rollno,dp)
+);

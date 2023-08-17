@@ -1,0 +1,26 @@
+4.	Display ROLLNO of students who have paid for more than twice.
+5.	Display average time taken for subject ORA.
+6.	Display faculty who can take more than 2 courses.
+7.	Display least course fee.
+8.	Display the number of months between first and last batches of course Java.
+9.	Display Year, course and number of batches of that course.
+10.	Display faculty who has got A grade for more than 1 subject.
+11.	Display the number of students joined in each month.
+12.	Display the number of students joined in each month  of the current year.
+
+6.	Display rollno, student name, pay date and amount paid.
+7.	Display rollno , student name, batch code ,  stdate of batch  and faculty code.
+8.	Display rollno , student name, course name  ,  stdate  of batch  and faculty code.
+9.	Display rollno , student name, course name , faculty code and enddate of all batches that were completed.
+10.	Display students who have got more number of characters in name than the student with roll number 10.
+11.	Display rollno, student name, email , pay date and amount paid.
+12.	In previous query include the details of student who haven’t paid anything so far.
+13.	Display the details of students who have paid nothing so far.
+
+6.	Display details of courses taken by students who joined in the month of june, 2001.
+7.	Delete the details of students who haven’t paid anything so far.
+8.	Display the details of course for which there are more than 3 batches.
+9.	Display the details of course that has highest number of batches.
+10.	Change the ENDDATE of batch B8 to the ENDDATE of most recent batch.
+11.	Display the details of students who haven’t paid total amount so far.
+12.	Display the details of payment made by students of Oracle batch started on 5-dec-2000.
