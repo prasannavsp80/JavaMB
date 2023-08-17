@@ -1,0 +1,40 @@
+Display List of tables available in current database
+
+select * from tab;
+
+Display info. about particular table 
+
+desc Emp;
+
+Display all records from Emp table
+
+select * from Emp;
+
+Display Oracle Server instance name 
+
+select * from global_name;
+
+set linesize 200
+
+
+select Empno,Ename,JOb,Sal,Mgr from Emp
+order by Ename;
+
+select Empno,Ename,JOb,Sal,Mgr from Emp
+order by job desc;
+
+select Empno,Ename,JOb,Sal,Mgr from Emp
+order by job,Ename;
+
+select Empno,Ename,JOb,Sal,Mgr from Emp
+order by job desc,Ename asc;
+
+select length('sravani')-instr(reverse('sravani'),'a')+1 from dual;
+
+select substr('Harsha Reddy',1,instr('Harsha Reddy',' ')) as FirstName,
+substr('Harsha Reddy',instr('Harsha Reddy',' ')+1) as lastName
+from dual;
+
+
+select length('misissipi')-length(replace('misissipi','i','')) from dual;
+

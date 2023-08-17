@@ -1,0 +1,110 @@
+DBMS (Database Management System) 
+
+Database : A database is set of interrelated files, stored with min. redundancy to serve many users work concurrently. 
+
+DBMS :
+
+The software that which allows you to perform transactions on data like
+
+	-> Adding New Data
+
+	-> Modifying already existing Data
+
+	-> Removing Unwanted Data 
+
+known as DBMS. 
+
+Objectives : 
+
+	-> Provides an efficient and convinient env. that which allows you to store
+		data in and retrieve data 
+
+	-> Granting access on data to the users based on their credentials. 
+
+Drawbacks : 
+
+	-> Data Redundancy
+
+	-> Risk to Data Integrity
+
+	-> Data Isolation
+
+	-> Difficult Access to Data
+
+	-> Unsatisfactory Security Measures 
+
+Data Model : It is the description of the org. of data in the database. It also describes the relationship among the data and any constraints that have to be defined on data. 
+
+There are 2 types data model we have 
+
+	-> Object Based 
+
+	-> Record Based 
+
+Relational System enforces data w.r.t. Keys 
+
+There are various keys as
+
+Employ(Empno, Ename, Job, Salary, SalDate, AadharNo, City, State) 
+
+1) Candidate Key : Any key that which uniquely identifies rows of a table known as candidate key. (Empno, AadharNo) 
+
+2) Primary Key : One of the candidate key needs to be chosen as primary key based on priority. (Empno) 
+
+3) Alternate Key : Any key that which is candidate key, but not primary key known as alternate key (AadharNo)
+
+4) Composite Key : Any key that which uniquely identifies rows of a table made up of more than one attribute known as composite key. {Empno+Saldate} 
+
+5) Foreign Key : Primary key in the parent table will be foreign key in child table. 
+
+Write a Query to specify as dept is 10 then its ORACLE,
+			    dept is 20 then its JAVA
+			    dept is 30 then its DOTNET
+			    dept is 40 then its ADMIN
+
+
+select empno, ename, job, deptno from Emp;
+
+
+select empno, ename, job, deptno,
+CASE DeptNo
+	when 10 then 'ORACLE'
+	when 20 then 'JAVA'
+	when 30 then 'DOTNET'
+	when 40 then 'ADMIN'
+END "DeptName"
+ from Emp;
+
+
+select empno, ename, job, sal, comm,
+case when comm is NULL THEN 0 else comm
+end "Comm",
+case when comm is NULL THEN SAL ELSE SAL+COMM
+END "Take Home"
+ from Emp;
+
+select length('misissipi')-length(replace('misissipi','i','')) from dual;
+
+select add_months(last_day(sysdate)+1,-1) from dual;
+
+select next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY') "First Friday",
+next_day(next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY'),'FRIDAY') 
+"Second Friday",
+next_day(next_day(next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY'),'FRIDAY'),'FRIDAY') "Third Friday",
+next_DAY(next_day(next_day(next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY'),'FRIDAY'),'FRIDAY'),'FRIDAY') "FOURTH FRIDAY"
+from Dual;
+
+
+
+select next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY') "First Friday",
+next_day(next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY'),'FRIDAY') 
+"Second Friday",
+next_day(next_day(next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY'),'FRIDAY'),'FRIDAY') "Third Friday",
+next_DAY(next_day(next_day(next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY'),'FRIDAY'),'FRIDAY'),'FRIDAY') "FOURTH FRIDAY",
+CASE WHEN
+TO_CHAR(next_DAY(next_DAY(next_day(next_day(next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY'),'FRIDAY'),'FRIDAY'),'FRIDAY'),'FRIDAY'),'mm')=
+TO_CHAR(SYSDATE,'mm') THEN 
+next_DAY(next_DAY(next_day(next_day(next_day(add_months(last_day(sysdate)+1,-1),'FRIDAY'),'FRIDAY'),'FRIDAY'),'FRIDAY'),'FRIDAY')
+END
+ "FIFTH FRIDAY"
+from Dual;

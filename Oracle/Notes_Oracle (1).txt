@@ -541,7 +541,7 @@ select empno,ename,sal,nvl(comm,0),
 nvl2(comm,sal+comm,sal) from emp;
 
 
-select mgr,nvl(to_char(mgr),'No Manager')
+select empno,nvl(to_char(mgr),'No Manager')
 from Emp;
 
 select comm,nvl(to_char(comm),'No Commission')
