@@ -1,0 +1,321 @@
+select Dept.Deptno,Dname,Empno,Ename,Job
+from Dept,Emp where Dept.Deptno=Emp.Deptno;
+
+
+select Dept.Deptno, Dname, Empno, Ename, Job, SAL
+from Dept INNER JOIN EMP 
+ON Dept.Deptno = Emp.DeptNo
+order by Dname;
+
+select D.Deptno, Dname, Empno, Ename, Job, SAL
+from Dept D INNER JOIN EMP E 
+ON D.Deptno = E.DeptNo;
+
+select D.Deptno, Dname,Empno, Ename, Job, SAL
+from Dept D INNER JOIN EMP E 
+ON D.Deptno = E.Deptno;
+
+select D.Deptno,D.Dname,
+E.Empno, E.Ename, E.sal
+from
+(select deptno,dname from Dept)D,
+(select empno, ename, job, sal, comm from Emp) E;
+
+select Ed.Empno, Ed.Ename, Ed.Job, Ed.SAL
+FROM
+(select empno, ename, job, sal,
+DENSE_RANK() OVER(Order BY SAL DESC) "RNO" 
+from Emp)ED
+where ED.Rno=5;
+
+
+select ED.Job, ED.cnt
+FROM
+(select job,count(*) as cnt from Emp
+group by Job) ED
+WHERE ED.cnt > 1;
+
+
+select ED.Deptno, CASE ED.RNO
+	WHEN 1 THEN ED.DNAME ELSE '' END "DNAME",
+	ED.Empno, ED.Ename, ED.JOB, ED.SAL,ED.RNO
+from
+(select Dept.Deptno, Dname, Empno, Ename, Job, SAL,
+ROW_NUMBER() OVER(PARTITION BY DNAME ORDER BY DNAME) AS RNO
+from Dept INNER JOIN EMP 
+ON Dept.Deptno = Emp.DeptNo
+order by Dname)ED;
+
+-- Display top 5 employ records based on their sal
+
+
+
+select Ed.Empno, Ed.Ename, Ed.Job, Ed.SAL
+FROM
+(select empno, ename, job, sal,
+DENSE_RANK() OVER(Order BY SAL DESC) "RNO" 
+from Emp)ED
+where ED.Rno<=5;
+
+
+-- Extracting data from more than 2 tables 
+
+select A.AgentID, FirstName,LastName,City,P.PolicyID,AnnualPremium,ModalPremium,
+AppNumber
+from Agent A INNER JOIN AgentPolicy AP
+ON A.AgentID=AP.AgentID
+INNER JOIN Policy P ON 
+P.PolicyID=AP.PolicyID;
+
+select A.AgentID, FirstName,LastName,City,P.PolicyID,AnnualPremium,ModalPremium,
+AppNumber
+from Agent A LEFT JOIN AgentPolicy AP
+ON A.AgentID=AP.AgentID
+LEFT JOIN Policy P ON 
+P.PolicyID=AP.PolicyID;
+
+select A.AgentID, FirstName,LastName,City,P.PolicyID,AnnualPremium,ModalPremium,
+AppNumber
+from Agent A RIGHT JOIN AgentPolicy AP
+ON A.AgentID=AP.AgentID
+RIGHT JOIN Policy P ON 
+P.PolicyID=AP.PolicyID;
+
+select A.AgentID, FirstName,LastName,City,P.PolicyID,AnnualPremium,ModalPremium,
+AppNumber
+from Agent A FULL JOIN AgentPolicy AP
+ON A.AgentID=AP.AgentID
+FULL JOIN Policy P ON 
+P.PolicyID=AP.PolicyID;
+
+select E1.Empno as "Manager ID", 
+	E1.ENAME as "Manager Name", 
+	E2.Empno as "Employ ID", 
+	E2.ENAME as "Employ Name"
+from EMP E1 INNER JOIN EMP E2 
+ON E1.Empno = E2.MGR;
+
+
+select E1.Empno as "Manager ID", 
+	E1.ENAME as "Manager Name", 
+	E2.Empno as "Employ ID", 
+	E2.ENAME as "Employ Name"
+from EMP E1 RIGHT JOIN EMP E2 
+ON E1.Empno = E2.MGR;
+
+
+Subqueries : Sometimes, it is not possible to extract data by using single sql statement. To Overcome this, we need the help of subquery, a subquery is a query that which is having another query inside. The query which is inside known as inner query, the query which is outside known as outer query. 
+
+Everytime, the result of the inner query will be send as an input to the outer query. 
+
+--> Display the max. sal from emp table 
+
+select max(sal) from Emp;
+
+--> Display the name of the person who is getting max. salary 
+
+select ename from emp where sal=
+(select max(sal) from Emp);
+
+--> Display PolicyNumber for which annualpremium is maximum. 
+
+--> Display 2nd max. salary 
+
+select max(sal) from Emp where sal < (select max(sal) from Emp);
+
+select sal from emp where sal <> ALL(select max(sal) from Emp);
+
+There are types of subqueries
+
+1) Single Row
+
+2) Multiple Row 
+
+--> Display Records whose deptno exists in both tables 
+
+select Empno, Ename, Job,Sal,Deptno from Emp where deptno=any(select deptno from dept);
+
+--> Display Records from Dept whose Deptno does not exist in emp(as dept. which don't have records in emp)
+
+select * from Dept where deptno <> ALL(select Deptno from Emp);
+
+--> Display Idle Agents 
+
+select AgentId, Firstname,LastName,City,State from Agent 
+where AgentID <> ALL(select AgentId from AgentPolicy);
+
+--> Display Agents who did policy 
+
+select AgentId, Firstname,LastName,City,State from Agent 
+where AgentID = ANY(select AgentId from AgentPolicy);
+Types of various Database Commands : 
+
+There are various database commands as
+
+	(i) DDL (Data Definition Language) 
+
+		CREATE
+
+		ALTER
+
+		DROP
+
+		TRUNCATE 
+
+	(ii) DML
+
+	(iii) DQL
+
+
+EMPLOY(Empno, Name, Gender, Dob, Dept, Desig, Basic) 
+
+    Empno -> Primary Key 
+    Name -> Cannot Be Null
+    Gender -> Male or Female 
+    DOB -> Cannot be greater than today's date 
+    Dept -> Dotnet or Java or Oracle
+    Desig -> PE, PEE, DS 
+    Basic -> Between 10000 to 90000
+
+Create Table Employ
+(
+    Empno INT Primary Key,
+    Name varchar2(30) NOT NULL,
+    Gender varchar2(15) 
+    constraint chk_Employ_Gender check(Gender IN('Male','Female')),
+    Dob Date,
+--    constraint chk_Employ_DOB Check(dob <= sysdate),
+    Dept varchar2(30)
+    constraint chk_Employ_dept check(dept in('Dotnet','Java','Oracle')),
+    Desig varchar2(30)
+    constraint chk_Employ_desig check(desig in('PE','PEE','DS')),
+    Basic numeric(9,2)
+    constraint chk_Employ_Basic check(Basic between 10000 and 90000)
+);
+
+Insert into Employ(Empno,Name,Gender,Dob,Dept,Desig,Basic)
+values(1,'Chandan','Male',TO_DATE('2001-09-10','yyyy-MM-dd'),
+  'Dotnet','PE',56444);
+
+Insert into Employ(Empno,Name,Gender,DOB,Dept,Desig,Basic)
+values(&empno,'&name','&gender',TO_DATE('&dob','yyyy-MM-dd'),
+'&dept','&desig',&basic);
+
+
+create table  courses
+(
+   ccode  varchar2(5) 
+   constraint courses_pk  primary key,
+   Name	  varchar2(30) 
+   constraint courses_name_u unique,
+   Duration number(3) 
+   constraint courses_duration_chk check( duration >= 1),
+   fee number(5)
+   constraint courses_fee_chk check( fee >= 0 ),
+   Prerequisite varchar2(100)
+);
+
+create table  faculty
+(
+   FCODE Varchar2(5) 
+   constraint faculty_pk  primary key,
+   Name varchar2(30),
+   qual	 varchar2(30),
+   exp	 varchar2(100) 
+);
+
+create table  course_faculty
+(
+   fcode varchar2(5)
+  constraint course_faculty_fcode_fk references faculty(fcode),
+   CCODE   varchar2(5) 
+  constraint course_faculty_ccode_fk references courses(ccode),
+   grade   char(1)  
+  constraint course_faculty_grade_chk
+                           check ( upper(grade) in ('A','B','C') ),
+   constraint course_faculty_pk  primary key(ccode,fcode)
+);
+
+
+insert into courses values('ora','Oracle database',25,4500,'Windows');
+
+insert into courses values('vbnet','VB.NET',30,5500,'Windows and 
+programming');
+
+insert into courses values('c','C programming',20,3500,'Computer Awareness');
+
+insert into courses values('asp','ASP.NET',25,5000,'Internet and programming');
+
+insert into courses values('java','Java Language',25,4500,'C language');
+
+insert into courses values('xml','XML Programming', 15, 4000, 'HTML,Scripting, ASP/JSP');
+
+
+insert into faculty values('gk','George Koch','MS Computer Science','15 years with databases');
+
+insert into faculty values('da','Dan Appleman','CS and EE graduate', 'Extensively worked with COM');
+
+insert into faculty values('hs','Herbert Schildt','MS Computer Science', 'Author of several books');
+
+insert into faculty values('dh','David Hunter','MS Electronics', 'Extensively worked with Internet Tehnologees');
+
+insert into faculty values('sw','Stephen Walther','Ph.D. in Philosophy', 'Extensively worked with Internet Tehnologees');
+
+insert into faculty values('kl','Kevin Loney', 'MS Eletronics', 'Specialized in Oracle DBA');
+
+insert into faculty values('jj','Jamie Jaworski','Bachlors of Electrical' ,'Developed programs for US defense department');
+
+insert into faculty values('jc','Jason Couchman','OCP DBA','Published articles on Oracle');
+
+
+
+
+rem ------------------------- COURSE_FACULTY ------------------------
+
+insert into course_faculty values('gk','ora','A');
+
+insert into course_faculty values('kl','ora','A');
+
+insert into course_faculty values('jc','ora','A');
+
+insert into course_faculty values('da','vbnet','A');
+
+insert into course_faculty values('sw','asp','A');
+
+insert into course_faculty values('da','asp','B');
+
+insert into course_faculty values('hs','c','A');
+
+insert into course_faculty values('dh','xml','A');
+
+insert into course_faculty values('jj','java','A');
+
+insert into course_faculty values('hs','java','B');
+
+insert into course_faculty values('jj','c','A');
+
+insert into course_faculty values('jj','vbnet','B');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
