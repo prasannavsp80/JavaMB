@@ -15,11 +15,11 @@ Create  table Orders
    StockID varchar2(30),
     QtyOrd number,
    total number(9,2)
- )
+ );
    
 Create Table Amount
 (
   Gamt numeric(9,2)
-)
+);
 
 insert into Amount values(0);
