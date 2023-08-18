@@ -1,0 +1,27 @@
+
+create or replace procedure prcAccountSearch(Accno Accounts.AccountNo%type)
+AS
+BEGIN
+    declare 
+        fname Accounts.FirstName%type;
+        lname Accounts.LastName%type;
+        cit Accounts.City%type;
+        stat Accounts.State%type;
+        Amt Accounts.Amount%type;
+        cf Accounts.CheqFacil%type;
+    begin
+       select FirstName,LastName,City,State,Amount,CheqFacil
+       into fname,lname,cit,stat,amt,cf from Accounts where AccountNo=accno;
+       dbms_output.put_line('First Name ' || fname);
+       dbms_output.put_line('Last Name ' || lname);
+       dbms_output.put_line('City ' || cit);
+       dbms_output.put_line('State ' || stat);
+       dbms_output.put_line('Amount ' || amt);
+       dbms_output.put_line('Cheq Facil ' || cf);
+     Exception
+	WHEN NO_DATA_FOUND THEN
+	   dbms_output.put_line('Account No Not Found...');
+    end;
+END;
+
+Exec prcAccountSearch(1);
