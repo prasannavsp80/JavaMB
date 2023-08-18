@@ -1,0 +1,31 @@
+select * from tab;
+
+drop table 
+
+select * from stock;
+
+select * from orders;
+create table stock
+(
+	stockid varchar2(30) primary key,
+	ItemName varchar2(30),
+	Price number(9,2),
+	QuantityAvail number,
+	Status varchar2(10) default 'false'
+);
+
+
+Create  table Orders
+(
+   OrderId varchar2(30),
+   StockID varchar2(30),
+    QtyOrd number,
+   total number(9,2)
+ )
+   
+Create Table Amount
+(
+  Gamt numeric(9,2)
+)
+
+insert into Amount values(0);
