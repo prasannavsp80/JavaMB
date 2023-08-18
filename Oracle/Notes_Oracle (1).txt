@@ -636,7 +636,7 @@ D.Deptno=E.Deptno)Ed
 
 	(i) Left Outer Join :
 
-		All the records from the left-side table, and matching records from the right side table. 
+		All the records from the left-side table, and matching records from the right side table. If any child value does not exist it replaces with null.
  
        (ii) Right Outer Join : All the records from the right-side table, and matching records from the left-side table. 
 

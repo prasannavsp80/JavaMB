@@ -31,10 +31,10 @@ create table  courses
 
 create table  faculty
 (
-   fCODE	Varchar2(5) constraint faculty_pk  primary key,
-   Name	varchar2(30),
-   qual	varchar2(30),
-   exp		Varchar2(100) 
+   fcode varchar2(5) constraint faculty_pk  primary key,
+   Name	    varchar2(30),
+   qual	   varchar2(30),
+   exp	       	  Varchar2(100) 
 );
 
 
@@ -93,3 +93,8 @@ references students(rollno),
                                    check ( amount > 0 ),
    constraint payments_pk primary key (rollno,dp)
 );
+
+alter table table_name modify column varchar2(newsize);
+
+
+

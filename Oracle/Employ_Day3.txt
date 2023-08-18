@@ -1,0 +1,15 @@
+Create Table Employ
+(
+   Empno number primary key,
+   name varchar2(30),
+   dept varchar2(30),
+   desig varchar2(30),
+   basic numeric(9,2)
+);
+
+Insert  into Employ values(1,'Hariharan','Java','Programmer',88322);
+Insert  into Employ values(2,'Shreyansh','Java','Developer',91113);
+Insert  into Employ values(3,'Akhila','Dotnet','Manager',89003);
+Insert  into Employ values(4,'Vaishakh','Oracle','TeamLead',89944);
+Insert  into Employ values(5,'Dilip','SAP','DBA',89773);
+
