@@ -1,0 +1,187 @@
+select * from tab;
+
+drop table 
+
+select * from stock;
+
+select * from orders;
+create table stock
+(
+	stockid varchar2(30) primary key,
+	ItemName varchar2(30),
+	Price number(9,2),
+	QuantityAvail number,
+	Status varchar2(10) default 'false'
+);
+
+
+Create  table Orders
+(
+   OrderId varchar2(30),
+   StockID varchar2(30),
+    QtyOrd number,
+   total number(9,2)
+ );
+   
+Create Table Amount
+(
+  Gamt numeric(9,2)
+);
+
+insert into Amount values(0);
+
+create or replace procedure prcAddStock(ItName stock.ItemName%type,
+                                        Pric stock.Price%type,
+                                        QtAvail stock.QuantityAvail%type)
+as
+begin
+   declare 
+   sid varchar2(10);
+   id number(10);
+   begin
+
+      select case when max(stockid) is null then 'S000' else max(stockId) end
+	 into sid from stock;
+      id:=to_number(substr(sid,2));
+      id:=id+1;
+      if(id >=1 AND id <= 9) then
+           sid:='S00'||id;
+      end if;
+      if(id >= 10 and id <= 99) then
+          sid:='S0'+id;
+      end if;
+      if(id >= 100 and id <= 999) then
+          sid:='S'+id;
+      end if;
+     insert into stock(stockid,itemname,price,Quantityavail) values(sid,ItName,pric,QtAvail);
+     dbms_output.put_line(sid);
+          dbms_output.put_line('id is ' ||id);
+   end;
+end;
+
+
+
+exec prcAddStock('adfsa',44,33);
+
+
+select * from tab;
+
+drop table 
+
+select * from stock;
+
+select * from orders;
+create table stock
+(
+	stockid varchar2(30) primary key,
+	ItemName varchar2(30),
+	Price number(9,2),
+	QuantityAvail number,
+	Status varchar2(10) default 'false'
+);
+
+
+Create  table Orders
+(
+   OrderId varchar2(30),
+   StockID varchar2(30),
+   StockName varchar(30),
+   QtyOrd number,
+   Total number(9,2);
+ )
+   
+Create Table Amount
+(
+  Gamt number(9,2)
+)
+insert into Amount values(0);
+
+create or replace procedure prcAddStock(ItName stock.ItemName%type,
+                                        Pric stock.Price%type,
+                                        QtyAvail stock.QUantiTYAVAIL%type)
+as
+begin
+   declare 
+   sid varchar2(10);
+   id number(10);
+   begin
+
+      select case when max(stockid) is NULL THEN 'S000' else
+	max(stockId) END into sid from stock;
+      id:=to_number(substr(sid,2));
+      id:=id+1;
+      if(id >=1 AND id <= 9) then
+           sid:='S00'||id;
+      end if;
+      if(id >= 10 and id <= 99) then
+          sid:='S0'+id;
+      end if;
+      if(id >= 100 and id <= 999) then
+          sid:='S'+id;
+      end if;
+     insert into stock(stockid,itemname,price,quantityavail) values(sid,ItName,pric,qtyAvail);
+     dbms_output.put_line(sid);
+          dbms_output.put_line('id is ' ||id);
+   end;
+end;
+
+exec prcAddStock('adfsa',44,33);
+
+
+create or replace procedure prcPlaceOrder(sid orders.StockID%type,qtyord orders.qtyord%type)
+as 
+begin
+    declare
+      oid varchar2(30);
+      qtAvl number;
+      dif number;
+      total number(9,2);
+      rate number(9,2);
+      id number(10);
+    begin
+        select max(orderid) into oid from orders;
+      id:=to_number(substr(oid,2));
+      id:=id+1;
+      if(id >=1 AND id <= 9) then
+           oid:='O00'||id;
+      end if;
+      if(id >= 10 and id <= 99) then
+          oid:='O0'+id;
+      end if;
+      if(id >= 100 and id <= 999) then
+          oid:='O'+id;
+      end if;
+     select QtyAvail,Price into qtAvl,rate from stock where stockid=sid;
+     dif:=qtAvl-qtyord;
+     if(dif >= 1) then
+          update stock set qtyAvail=dif where stockid=sid;
+          total:=rate*qtyord;
+          insert into orders values(oid,sid,qtyord,total);
+          update amount set gamt=gamt+total;
+          dbms_output.put_line('Order Placed Successfully...');
+     end if;
+     if(dif <= 0) then 
+         dbms_output.put_line('Insufficient Quantity...');
+     end if;
+     dbms_output.put_line(qtAvl);
+          dbms_output.put_line(rate);
+    dbms_output.put_line(oid);
+          dbms_output.put_line('id is ' ||id);
+    end;
+end;
+
+create or replace procedure prcShipmentOrders(sid stock.StockID%type,qtyship stock.qtyavail%type)
+as
+begin
+    declare 
+	rate number(9,2);
+	total number(9,2);
+	begin
+	   select price int rate from stock where stockid=sid;
+	   total:=qtyship*rate;
+	   update stock set qtyavail=qtyavail+qtyship where stockid=sid; 
+	   Update Amount set Gamt=Gamt-total; 
+	   dbms_output.put_line('Refill Success');
+	end;
+end;
+
