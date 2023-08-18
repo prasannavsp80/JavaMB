@@ -1,0 +1,8 @@
+git add .  -> staging area
+
+git commit -m "message" -> Local Repo
+
+git push origin main (main is the branch_name) 
+
+-> Remote Repo
+
