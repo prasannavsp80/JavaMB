@@ -1,0 +1,117 @@
+create or replace function fnGenerateAccountNo return number
+as
+accno number;
+begin
+    select case when max(AccountNO) IS NULL then 1 else 
+         max(accountNo)+1 end into accno from Accounts;
+    return accno;
+end;    
+
+create or replace function fnSearchAccount(Accno Accounts.AccountNo%type) return number
+as
+amt accounts.Amount%type;
+res number;
+begin 
+    select amount into amt from accounts where accountNo=accno;
+    res:=0;
+    return res;
+Exception 
+    WHEN NO_DATA_FOUND THEN
+    res:=1;
+    return res;
+end;
+
+create or replace procedure prcAccountCreate
+(
+Fname Accounts.FirstName%type,
+Lname Accounts.LastName%type,
+Cit Accounts.City%type,
+Stat Accounts.State%type,
+Amt Accounts.Amount%type,
+Cf Accounts.CheqFacil%type,
+Actype Accounts.AccountType%type	
+)
+AS
+BEGIN
+    declare 
+      accno number;
+    begin
+        select fnGenerateAccountNo() into accno from dual; 
+        Insert into Accounts(AccountNo,FirstName,LastName,City,State,Amount,
+	   CheqFacil,AccountType) values(accno,Fname,Lname,Cit,Stat,Amt,Cf,Actype);
+       dbms_output.put_line('Account Created Successfully...');
+	EXCEPTION
+	   WHEN DUP_VAL_ON_INDEX THEN 
+	     dbms_output.put_line('Account No Already exists...Please change the Code...');
+    end;
+END;
+
+create or replace procedure prcAccountSearch(Accno Accounts.AccountNo%type)
+AS
+BEGIN
+    declare 
+        fname Accounts.FirstName%type;
+        lname Accounts.LastName%type;
+        cit Accounts.City%type;
+        stat Accounts.State%type;
+        Amt Accounts.Amount%type;
+        cf Accounts.CheqFacil%type;
+        res number;
+    begin
+       select fnSearchAccount(Accno) into res from dual;
+       if res=0 then
+       select FirstName,LastName,City,State,Amount,CheqFacil
+       into fname,lname,cit,stat,amt,cf from Accounts where AccountNo=accno;
+       dbms_output.put_line('First Name ' || fname);
+       dbms_output.put_line('Last Name ' || lname);
+       dbms_output.put_line('City ' || cit);
+       dbms_output.put_line('State ' || stat);
+       dbms_output.put_line('Amount ' || amt);
+       dbms_output.put_line('Cheq Facil ' || cf);
+       else 
+          dbms_output.put_line('AccountNo Not Found');
+       end if;
+    end;
+END;
+
+create or replace function fnChkBal(
+                                     Accno Accounts.AccountNo%type,
+                                     wamt number
+                                    ) return number
+AS
+amt accounts.amount%type;
+res number;
+begin
+     select Amount into amt from accounts where accountNo=accno;
+     if amt-wamt >= 1000 then
+       res:=0;
+     else
+       res:=1;
+     end if;
+     return res;
+end;
+
+Create Or replace Procedure PrcAmountWithdraw(AccNo Accounts.AccountNo%type,
+				WithAmt Accounts.Amount%type)
+AS
+BEGIN 
+    declare 
+        Amt Accounts.Amount%type;
+	res1 number;
+        res2 number;
+	begin 
+		select fnSearchAccount(Accno) into res1 from dual;
+                if res1=0 then 
+                    select fnchkBal(AccNo,WithAmt) into res2 from dual;
+                    if res2=0 then 
+                          Update Accounts set Amount=Amount-WithAmt WHERE AccountNo=Accno;
+	Insert into Trans(AccountNo,TranAmount,TranType)
+			values(AccNo,WithAmt,'D');
+                    else 
+                      dbms_output.put_line('*** Insufficient Balance ***');
+                    end if;
+                else 
+                  dbms_output.put_line('AccountNo Not Found...');
+                end if;
+       end;
+END;
