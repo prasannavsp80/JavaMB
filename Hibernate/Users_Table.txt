@@ -1,0 +1,11 @@
+Create Table Users
+(
+  userName varchar2(30) primary key,
+  passCode varchar2(30) NOT NULL
+);
+
+Insert into Users values('Avinash','Avinash');
+Insert into Users values('Akhila','Akhila');
+insert into Users values('Venaktesh','Venkatesh');
+
+commit;
