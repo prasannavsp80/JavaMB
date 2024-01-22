@@ -1,0 +1,30 @@
+Create Table Complaint
+(
+   ComplaintID varchar2(30) primary key,
+   ComplaintType varchar2(30),
+   CDescription varchar2(100),
+   ComplaintDate date default sysdate,
+   Severity varchar2(20),
+   Status varchar2(30) default 'Pending'
+);
+
+ComplaintID to be generated Automatically C001,C002 etc...
+
+AddComplaint, SearchComplaint, ShowAllComplaint
+
+Create Table Resolve
+(
+   ResolveId varchar2(30) primary key,
+   ComplaintID varchar2(30),
+   ComplaintDate Date,
+   ResolveDate Date,
+   ResolvedBy varchar2(30),
+   Comments varchar2(100)
+);
+
+
+All Resloved Data to be displayed along with TAT (Turn Around Time)
+
+if TAT >= 7 and < 10 display records in pink color
+If TAT >= 10 those records print in Red color
+
