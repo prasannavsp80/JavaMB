@@ -339,6 +339,32 @@ for(initialization;condition;increment/decrement) {
      statement(s);
 }
 
+Array : An array is the finite ordered set of homogeneous elements, means all the elements belongs to same data type. 
+
+All the elements of array are stored in successive memory locations. 
+
+data_type[] variable = new data_type[]{element1, element2....};
+int[] a = new int[]{4,2,66,23,11}
+
+a[0]=4;
+a[1]=2;
+a[2]=66;
+a[3]=23;
+a[4]=11;
+
+
+int[] a = new int[] {5,23,22,56,22};
+//		for(int i=0;i<a.length;i++) {
+//			System.out.println(a[i]);
+//		}
+		for (int i : a) {
+			System.out.println(i);
+		}
+
+How internally foreach loop executes :
+
+At first i points to the first element in Array A, after processing first element it checks next element is there or not by using hasMoreElements(). If hasMoreElements() returns true, it moves to the next element by using nextElement().  It repeats as soon as hasMoreElements() returns true. 
+
 
 
  
