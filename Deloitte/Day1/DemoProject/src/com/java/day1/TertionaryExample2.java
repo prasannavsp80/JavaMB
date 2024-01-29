@@ -6,6 +6,8 @@ public class TertionaryExample2 {
 
 	public void show(int a, int b, int c) {
 		int m =(a > b ? (a > c ? a : c) : (b > c ? b : c));
+		// true Case a > b ? a : b 
+		// false case a > b ? c : c 
 		System.out.println("Maximum Value is  " +m);
 	}
 	public static void main(String[] args) {
