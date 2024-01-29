@@ -1,0 +1,275 @@
+1)	What would be the output for the below code
+
+public class ArgsDemo {
+    String company = "Hexaware";
+public static void main(String[] args) {
+System.out.println(args[0] + " " +args[2]);
+    }
+}
+
+Java ArgsDemo asil prajwal sashwat  
+
+A) Asil Sashwat  B) Asil Prajwal C) Compile Time Error D) Runtime Error
+_____________________________________________________________________
+
+
+2) What is output
+public class P1 {
+public static void main(String[] args) {
+int i=10;
+int j = ++i;
+System.out.println(i + " " +j);
+    }
+}
+
+A) 10 10 B) 11 10 C) 11 11 D) 10 11
+_________________________________________________________________
+3) 
+	What is the output for
+public class Main {
+	public static void main(String[] args) {
+	int[] a = new int[]{12,4,6,33,23};
+	for(int i : a) {
+		System.out.println(a);
+	}
+	}
+A) 12, 4, 6, 33, 23  B) Compile Time Error C) Prints Address 5 times
+D) Runtime Error
+__________________________________________________________________________
+4) What is the output for the below code
+public class Hello {
+   public static void main(String[] args) {
+	String str="Hello";
+	System.out.println(str.concat(" World"));
+   }
+}
+
+A) Hello B) Compile Time Error C) Hello World D) Runtime Error
+______________________________________________________________________
+5) What is the output
+public class Main
+{
+   public static void main(String[] args) {
+	int[] a=new int[6];
+	a[10]=66;
+   }
+}
+
+A) Code will run with no errors B) Code throw ArrayIndexOutOfBounds Exceptoin C) Compile Time Error D) No Output Produced
+__________________________________________________________________________
+
+6) public class Ex3 {
+
+public static void main(String[] args) {
+       String month;
+month = "Feb";
+switch(month) {
+case "Feb" : System.out.println("Hi");
+case "Mar" : System.out.println("Hello");
+case "Apr" : System.out.println("Bye");
+case "May" : System.out.println("Test");
+default :
+System.out.println("Default");
+       }
+    }
+}
+
+A) Hi B) Test C) Hi Hello Byte Test Default D) Hi Hello Byte Test 
+__________________________________________________________________________
+__________________________________________________________________________
+7) What would be output
+public class Ex3 {
+
+public static void main(String[] args) { 
+        String s1="abc";
+        String s2="abc";
+System.out.println(s1==s2);
+System.out.println(s1.equals(s2));
+    }
+}
+A) true false B) true true C) false false D) Compile time error
+__________________________________________________________________________
+8) To access a method in same package and other package derived classes, which modifier(s) we want
+
+A) private B) default C) protected D) ALL
+__________________________________________________________________________13) 14) 9) public class Ex3 {
+
+public Ex3() {}
+public static void main(String[] args) { 
+        String res = "i" + "like" + "java";
+	System.out.println(res);
+    }
+}
+A) ilikejava B) i C) i like java D) RUntime Error
+__________________________________________________________________________
+10)
+Which line will throw Error
+class First {
+    private int x=12;
+    protected String name = "Welcome";
+    public String company = "Company";
+}
+public class Quiz9 {
+    public static void main(String[] args) {
+        First obj = new First();
+        System.out.println(obj.x); // line 1
+        System.out.println(obj.name); // line 2
+        System.out.println(obj.company); // line 3
+    }
+}
+A) Line 3 B) Line 2 C) Line 1 D) No Error
+
+11) 
+
+Which statement is valid for the below syntax:
+while(i<10  && i >24){
+
+  }
+
+a) Compile Time Error
+b) Runtime Error
+c) While Loop Never executes as condition always false
+d) Infinite Loop
+
+
+__________________________________________________________________________
+
+Next Fill in the blanks 
+_________________________
+
+1) 
+
+What would be output for below code
+int[] arr1 = {55,77,99,11};
+int[] arr2 = arr1;
+arr2[3] = 123;
+System.out.println(arr1[3]);
+
+2) 
+What will be output of following code snippet?
+byte i = (byte) 256;
+  byte x = i;
+  System.out.println(x);
+
+3) 
+ int x = 10; 
+do { 
+   x--; // business logic
+ } while (x < 10); 
+
+How many times will business logic line to be executed?
+
+4)  Choose incorrect statement about Java Package?
+A)  A package is used to organize similar types of classes and interface.
+B)  Package are used in order to avoid name conflicts
+C)  A package cannot  have another package inside it
+D) A package is used to provide access control to classes and interface.
+
+5)
+What is the output of the below code:
+
+  int counter = 0;
+  for(int i = 5;  i > 0 ; i-- ) {
+        if( i % 2 != 0){
+            counter++;
+        }
+   }
+  System.out.println(counter);
+
+
+6) Choose the invalid identifiers.
+a. orderId
+b. $price
+c. _name
+d. &data
+e. switch
+
+7) class Test
+{
+     public static void main(String[] args)
+     {
+             String a = ""Sam"";
+            int b= 10,c=20,d=30;
+            System.out.println(a+b+c+d);
+           System.out.println(b+c+d+a);
+           System.out.println(b+c+a+d);
+       }
+
+}
+
+8) String valid=""true""
+if(valid)
+System.out.println(""valid"");
+else
+System.out.println(""not valid"");"	
+
+9) What is the output of the below code?
+
+boolean status1 = ( 5.0  <=  6.0)  &&  ( 4  <  5);
+boolean status2 = ( 10  !=  10)  ||  (10 == 10);
+System.out.println("status1:"+ status1 + \nstatus2:" + status2);
+
+10) 
+What is the output of the below code?
+
+boolean status1 = ( 5.0  <=  6.0)  &&  ( 4  <  5);
+boolean status2 = ( 10  !=  10)  ||  (10 == 10);
+System.out.println("status1:"+ status1 + \nstatus2:" + status2);
+
+11) 
+What will be the output of the below code ?
+  int a = 5;
+  int b = 10;
+  int c = 20;
+  int result = (a * b) - (c + 50) / 40 * ++b;
+  System.out.println(result);
+
+12) 
+Predict the output for given the code fragment:
+
+int b=4;
+b--;
+System.out.println(--b);
+System.out.println(b);		
+
+13) What is the output of below code?
+
+int[] a = {1,2,3};
+int[] b = {4,5,6};
+a = b;
+b[1] =  9;
+System.out.println(a[1] + " " + b[1]);
+
+14) What is the output of below code snippet?
+
+int p = 1; int q = 3;
+int m = p++ + --q;
+System.out.println(m++)
+
+15) What is the output of the below code:
+class Test{
+ public static void main(String[] args) {
+  for(;;) {
+   System.out.println(""Hello"");
+   }
+ }
+}
+
+16) class Hello {
+	public static void main(String[] args) {
+	 while(true) {
+		System.out.println("Hi");
+	 }
+     }
+   }
+
+17) What is the output of the below code:
+class Test{
+ public static void main(String[] args) {
+   int i=10;
+   int j = i++ + ++i + ++i + i++ + --i - i++;
+   System.out.println(i + " " +j);
+ }
+}
+
+18) 
