@@ -1,0 +1,152 @@
+Strings : 
+
+Strings are immutable, as once they are assigned we cannot alter the size by using any string methods. 
+
+There are 2 types of memories known as 
+
+	(i) STACK
+
+	(ii) HEAP 
+
+*** value types will be stored in STACK memory, and reference types will be stored in HEAP memory ***
+
+StringBuffer : It is an immutable class, where we can perform
+any changes in the given text. 
+
+Boxing and Unboxing : The concept of converting value type
+to reference type known as boxing, and reference type to value
+type known as unboxing. Object is the type, that which can be used 
+for boxing and unboxing. 
+
+int a;
+
+a="Hello";
+a=12;
+a=12.5
+
+Object a;
+a="Hello";
+a=12;
+a=12.5
+
+void show(int x) {
+...
+...
+}
+
+show();
+show(12);
+show(12, 5);
+
+You can pass varying arguments in method by using ...
+
+
+int result = 7^5;
+       7 => 111
+       5 => 101
+	      010
+
+int result = 5^6;
+
+^ operator acts as xor operator (exclusive or) 
+
+   5 => 101 
+   6 => 110 
+
+         011
+   How actually XOR operator rule is
+
+1 ^ 1 -> 0
+0 ^ 0 -> 0
+1 ^ 0 -> 1
+0 ^ 1 -> 1
+
+w.r.t what is result of 5^4 
+
+   5 -> 101
+   4 -> 100
+       _____
+	  001
+
+  5^5
+
+
+~ -> acts as negation operator or not operator
+
+as it is going to invert the bits. 
+
+Bit-wise operators : 
+
+<< : how the left shift operator is work ???
+
+int n = 2;
+
+n << 2;  0010 is the binary form for 2 
+
+if n is 2 then it shifts to 2 bits left side as it bemes 
+
+1000 -> 8
+
+How internally the shift operator works
+
+	System.out.println(n << 2);
+		n = 5; // 0101 as it is left shifted by 3 digits 
+	  
+		
+	//	101000 ->  40
+		System.out.println(n << 1); // 0101 for value 5 asking to shift left-side one digits 
+				then it becomes 1010 as the value is 10
+
+		System.out.println(n << 2) 00101 then it moves to 2 digits left-side
+			10100
+					000101
+				101000
+		System.out.println(n << 3); 
+		
+		System.out.println(n << 4); // 80
+
+
+
+>> : how the way the right-shift operator works
+
+	int x = 50;
+
+Binary value of 50 is  110010
+
+as we are asking to move 2 digits right side then
+
+it comes 1100 so the value is 12
+		   //001100 as it moves to right
+			// 12
+
+101
+
+5 
+
+
+
+int x = 40
+
+x >> 3
+
+101000 remove 0 zeros right side
+
+5 
+
+main() {
+  int ch='A';
+  System.out.println(ch);
+}
+
+
+main() {
+   double b=38.6;
+   int y = (int)b;
+   System.out.println(y);
+
+
+Syntax for unboxing 
+
+(new_type)variable_name;
+
+
