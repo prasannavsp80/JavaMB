@@ -1,0 +1,28 @@
+1) Write a Program to perform current bill as
+
+	accept no.of units and calculate final bill as
+
+	first 90 units 1rs per unit
+	91 to 150 units 1.5 rs per unit
+	151 to 200 units 2 rs per unit
+	200 to 240 units 2.5 per unit
+	240+ units 3 rs per unit
+
+Example : if units are 210 then
+
+(1*90) + (60*1.5) + (50 * 2) + (10 * 2.5) is the bill amount
+
+2) Write a Program to read grade and display message as
+
+grade is '1' or 'a' or 'A' then message Grade A
+grade is '2' or 'b' or 'B' then message is Grade B
+grade is '3' or 'c' or 'C' then message is Grade C
+
+else invalid grade
+
+3) Write a program to display prime numbers of given range
+
+4) Write a program to perfect numbers of given range
+
+5) Write a program to count no.of positive and negative numbers in the given array
+
