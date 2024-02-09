@@ -1,0 +1,35 @@
+
+
+A table contains data w.r.t. Rows and Columns. 
+
+Tables allows you to make your design strict and perfect. 
+
+as which places within boundaries. 
+
+This eliminates the problem of z-index. 
+
+To start with tables, we need the help of 
+
+<table>
+</table> 
+
+<table border="3">
+</table>
+
+Border allows you to specify the thickness of the particular table. 
+
+<tr>
+</tr> : Allows you to add new to the particular table. 
+
+<th> : Allows you to add heading cell to the particular table. 
+
+<td> : Allows you to add data cell to the particular table. 
+
+colspan : Used to merge no.of columns into a single column. 
+
+syntax : 
+
+<td colspan="2"> Means 2 columns are merged as a single column. 
+
+rowspan : Used to merge the no.of rows into a single column. 
+If you want to merge rows

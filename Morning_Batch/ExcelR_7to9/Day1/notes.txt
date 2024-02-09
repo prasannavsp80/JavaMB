@@ -1,0 +1,120 @@
+Web Application : These are the applications, that which are to be called from various places rather than where they are created.  
+
+If you want to make any distributed or robust applications, then we need the help of web applications. 
+
+You can create web applications in 2 ways 
+
+1) Scripting Languages  : These are the languages that which are interpreted, during execution they takes lot of time to execute.  
+
+2) Programming Languages : These are the languages that which are compiled first, during runtime they takes very less time to execute. 
+
+In Web Applications, we can implement 
+
+(i) Client-Side Scripting
+
+   Enables you to access the application from Client-System
+
+   No Network Traffic
+
+   Execution will be faster 
+
+(ii) Server-Side Scripting 
+
+   Enables you to access the application from server 
+
+   Network traffic is high
+
+   A bit slower 
+
+*** Any intranet based application w.r.t. No Security, please opt for client-side scripting ***
+
+*** Any internet based application w.r.t. Min. Security, please opt for both client-side and server-side scripting ***
+
+*** Any internet based application w.r.t. High Security, please opt for server side scripting *** 
+
+HTML (HyperText Markup Langauge) 
+
+Allows you to create any sample web pages. 
+
+You can define html page w.r.t. Tags. 
+
+Each open tag needs to be properly closed. 
+
+To start with html, use the tag
+
+<html>
+</html> 
+
+<head>
+</head> : Contains the global content for the given page. 
+
+<title> </title> : used to display heading on title bar. 
+
+<body>
+</body> : Contains actual content to be displayed in the document. 
+
+visual studio code 
+
+each html file to be stored with extension .html 
+
+<p> : If you want to start any new paragraph, use <p> tag. 
+
+<pre> </pre> : used to define the content in pre-defined format. 
+
+<dl> : Definition Langauge Used to define definitions and answers. 
+
+<dt> : Definition Term
+
+<dd> : Definition Description 
+
+To place an image in the document, we need the help of <img /> tag. 
+
+<img src="imageName" height width alt /> 
+
+Anchor Tag : Used to place link from current page to another page. 
+
+<a href="targetPage">Display Text</a>
+
+Order List : 
+
+You can specify ordered list, using <ol> tag </ol> 
+
+<ol type="1>
+</ol> 
+
+<ol type="A">
+</ol>
+
+<ol type="i">
+</ol> 
+
+You can specify items in ordered list using <li> tag</li> 
+
+<li> List Item 
+
+Unordered List : You can specify unordered list using <ul> tag </ul> 
+
+type is square, circle or disc 
+
+Forms : Allows you to accept the input from the keyboard. 
+
+You can specify form, by using 
+
+<form name="formName">
+</form> 
+
+We have various input types as 
+
+<input type="text" name= /> It is for textbox. 
+
+<input type="button" /> Normal Button
+
+<input type="submit" /> The button w.r.t. default action event. 
+
+<input type="password" /> : It comes as password format. 
+
+<input type="checkbox" /> : used to specify checkbox. 
+
+
+
+

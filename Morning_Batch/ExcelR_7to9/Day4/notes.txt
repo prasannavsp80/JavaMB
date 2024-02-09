@@ -1,0 +1,83 @@
+pattern : This attribute for textbox allows you to enter data w.r.t. Specific pattern to be followed. 
+
+Example, need to enter mobile number of 10 digits in a textbox. 
+
+How to apply the pattern for this 
+
+for numbers of 10 digits we need to specify as 
+
+pattern="[0-9]{10}"  
+
+USA phone No : 999-999-9999
+
+SSN No : 999-99-9999
+
+<input type="url" /> : Allows you to enter valid website address 
+
+If you want to ensure, i need to use textbox for input purpose and dropdown kind, then we need the help of <datalist> </datalist> 
+
+DataList contains list of values that to be populated automatically in textbox. 
+
+to implement DataList we need to use id attribute as
+
+<datalist id="studentsList">
+</datalist> 
+
+To add the elements in datalist, please use <option> </option> 
+
+Specify <option> tag as 
+
+<option value="Abhilash Reddy" label="Abhilash" /> 
+<option value="Keerthi" label="Keerthi" /> 
+
+Entired syntax for this is 
+
+<datalist id="studentsList">
+   <option value="Abhilash Reddy" label="Abhilash" /> 
+   <option value="Keerthi" label="Keerthi" /> 
+</datalist>
+
+Next job, we need to bind this data to existing textbox. 
+
+Assume, we have as textbox as 
+
+<input type="text" name="studentName" /> 
+
+Now to bind the dataList to the textbox, we need to use list attribute in textbox, and in list we need to call the id of the datalist. 
+
+<datalist id="studentsList">
+   <option value="Abhilash Reddy" label="Abhilash" /> 
+   <option value="Keerthi" label="Keerthi" /> 
+</datalist>
+
+<input type="text" name="studentName" list="studentsList" /> 
+
+If you want to play audio, then we need the help of 
+
+<audio /> 
+
+  <audio controls autoplay>
+         <source src="MaguvaSong.MP3" type="audio/mp3" />
+     </audio>
+
+
+Frame : 
+
+Frames allows you to define the page into multiple partitions. You can define frames by using 
+
+<frameset /> 
+
+To divide the page into 2 row partitions, 
+<frameset rows="50%,50%">
+</frameset> 
+
+To divide the page into 2 col partitions, 
+<frameset cols="50%,50%">
+</frameset> 
+
+To add files to the particular partition, then we need
+
+<frame src="fileName" /> 
+
+to stop resizing, please use atribute called noresize
+

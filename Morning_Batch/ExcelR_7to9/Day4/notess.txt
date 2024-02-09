@@ -1,0 +1,92 @@
+
+
+The top level class in java is Object 
+
+	hashCode() 
+        getClass() 
+        equals()
+	toString() 
+
+
+package com.java.demo;
+
+class First {
+	public void show() {
+		System.out.println("Class First...");
+	}
+}
+
+class Second extends First {
+	public void display() {
+		System.out.println("Class Second...");
+	}
+}
+public class InhEx {
+	public static void main(String[] args) {
+//		Second obj = new Second();
+//		obj.
+	}
+}
+
+
+First obj = new Second();
+
+Second obj = new First() // not possible 
+
+Anonymous Object : An object that which dont have any name known as anonymous object. 
+
+		First f1 = new First();
+		Second s1 = new Second();
+		
+		First f = (Firsrt)s1; -- will not work as derived class cannot be casted to base class
+
+First f = (Second) s1; -- this is possible as derived class can be casted to base class. 
+
+static variable : These are the variables, that which retains values irrespective of type of object. 
+
+Abstract class : A class that which can be created, but not implemented and instantiated known as abstract class. Abstract class contains both abstract and non-abstract methods, abstract methods needs to be overrided mandetorily by the derived class. 
+
+abstract class class_name {
+	abstract method1();
+	abstract method2();
+}
+
+Will abstract class have constructors ???
+
+interface : Java does not support the concept of multiple inheritance, to achieve this we need the help of interfaces. An interface contains method declaration, and the implementation can be done in the corresponding class, You can add more than one interface to the particular class. 
+
+Difference between interface and abstract class 
+_______________________________________________
+
+	-> An abstract class contains both abstract and non-abstract methods, where interface contains only abstract methods. 
+
+	-> Interface methods are public and abstract by default. 
+
+	-> Multiple Inheritance can be achieved by using interfaces
+
+	-> An interface can be called from anywhere to anywhere. 
+
+You can define an interface as
+
+interface interface_name {
+	method1();
+	method2();
+}
+
+You can add an interface to the class, by using implements keyword. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

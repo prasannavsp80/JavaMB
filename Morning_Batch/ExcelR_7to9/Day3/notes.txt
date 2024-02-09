@@ -1,0 +1,168 @@
+HTML Forms : 
+
+Allows you to accept interactive input from the keyboard. 
+
+You can define form by using 
+
+<form>
+</form> 
+
+what are the mandetory attributes we need to specify in form is
+
+	name attribute allows you to specify what type of form it is. 
+
+The name to be prefixed with frm. as
+
+specify form name as frmLogin or frmEmploy etc...
+
+You can specify form tag as
+
+<form name="frmEmploy">
+</form> 
+
+how to place a textbox in your form. 
+
+Textbox allows you to input the text information. 
+
+<label> : This control allows you to display static headings </label> 
+
+<input type="text" /> : By using this we can place textbox. 
+
+	name : This attributes saves the value which is typed in the textbox. 
+
+        placeholder : Used to add helpmate text to the given control. 
+	
+        size : Used to define the width of the textbox.
+
+	autofocus : Allows you to place the cursor by default once the form loads. 
+
+	value : Used to set default value to the particular control. 
+
+	readonly : Allows you to use non-editable textbox. 
+
+How to Place Actions on the form.
+
+For this we need the help of buttons. 
+
+You can specify buttons using 
+
+<input type="button" /> 
+
+	value : This attribute allows you to display caption for the button. 
+
+<input type="submit" /> 
+
+<input type="reset" /> : used to clear the content of the given page. 
+
+<button> </button>
+
+&nbsp; : This is predefined entity in html, which allows you to add spaces, how many &nbsp; u give that many spaces will come. 
+
+&copy : This is predefined entity which adds copyright symbol on your given doc. 
+
+Textbox allows you to enter single line of text, as you need to enter multiple lines of text, then we need the help of 
+
+<textarea> </textarea> : It shows default settings, you can change the size of the textbox using rows and cols 
+
+	rows
+	cols
+
+Radio button : this button used to select single value apart of choice of values. 
+
+The difference between radio button and checkbox, 
+
+checkbox allows you to select multiple items, and grouping not possible.
+
+Radio button allows you to make group of controls, as from that group one item can be selected. 
+
+To place a radio button,
+
+<input type="radio" /> 
+
+    -> name 
+
+    -> value 
+
+Example : 
+
+<input type="radio" name="gender" value="Male" /> Male
+<input type="radio" name="gen" value="Female" /> Female 
+
+To group the radio button, we need to give same name to the list of radio buttons. 
+
+In above scenario the name attribute value is different so both are selected. 
+
+to overcome this, specify same name to both radio buttons and check
+
+<input type="radio" name="gender" value="Male" /> Male
+<input type="radio" name="gender" value="Female" /> Female 
+
+You can specify checkbox 
+
+<input type="checkbox" /> 
+
+	name : provides name for the given checkbox, as for whom it belongs. 
+
+DropDown : Allows you to select particular value from the given list of values. 
+
+
+You can specify dropdown by using 
+
+<select> </select> Tag. 
+
+name is the mandetory attribute you need to specify. 
+
+	Ex : 
+	  <select name="student">
+	  </select> 
+
+Now, if you want to specify values for the given dropdown, we need to use
+
+	<option> </option> tag. 
+
+	syntax : 
+	<option value="value">DisplayText</option> 
+
+Example : 
+
+<select name="ddlStudent">
+   <option value="Deepanshu">Deephansu Dhiman</option>
+   <option value="Yamini">Yamini Ch</option>
+   <option value="Jhansi">Jhansi Omkar</option>
+   <option value="Mahenk Raj">Mahen</option> 
+</select>
+
+<input type="number" /> Allows you to strictly type numbers only. No alphabets or special symbols. 
+
+	-> name
+
+	-> placeholder
+
+	-> max
+
+	-> min
+	
+	-> step 
+
+to read date input from the keyboard, we need to use
+
+<input type="date" /> 
+
+To select month value in html
+
+<input type="month" />
+
+To select particular color from palette in html
+
+<input type="color" /> 
+
+To read any email value in html5 we have predefined tag called
+
+<input type="email" /> 
+
+prasanna.trainer@gmail.com
+
+
+
+
+

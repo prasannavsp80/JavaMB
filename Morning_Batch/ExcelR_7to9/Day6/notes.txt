@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Cell that spans two rows</h2>
+<p>To make a cell span more than one row, use the rowspan attribute.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <td>Jill</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Phone</th>
+    <td>555-1234</td>
+  </tr>
+  <tr>
+    <td>555-8745</td>
+  </tr>
+</table>
+</body>
+</html>
+
+____________________________________________
+
+<table> <caption>Favorite and Least Favorite Things</caption> <tr> <th></th><th></th> <th>Bob</th> <th>Alice</th> </tr> <tr> <th rowspan="2">Favorite</th> <th>Color</th> <td>Blue</td> <td>Purple</td> </tr> <tr> <th>Flavor</th> <td>Banana</td> <td>Chocolate</td> </tr> <tr> <th rowspan="2">Least Favorite</th> <th>Color</th> <td>Yellow</td> <td>Pink</td> </tr> <tr> <th>Flavor</th> <td>Mint</td> <td>Walnut</td> </tr> </table>
+
+____________________________________________________
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>HTML rowspan Attribute</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+    </style>
+</head>
+ 
+<body style="text-align:center">
+ 
+    <h1 style="color: green;">GeeksforGeeks</h1>
+    <h2>HTML rowspan Attribute</h2>
+ 
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Ajay</td>
+            <!-- This cell will take up space on 
+                    two rows -->
+            <td rowspan="2">24</td>
+        </tr>
+        <tr>
+            <td>Priya</td>
+        </tr>
+    </table>
+ 
+</body>
+ 
+</html> 
+
+_____________________________________________________
+
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>HTML rowspan Attribute</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+    </style>
+</head>
+ 
+<body style="text-align:center">
+    <h1 style="color: green;">GeeksforGeeks</h1>
+    <h2>HTML rowspan Attribute</h2>
+ 
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <!-- This cell will take up space 
+                    in 3 rows -->
+            <th rowspan="3">GeeksforGeeks</th>
+        </tr>
+        <tr>
+            <td>Arun</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Priya</td>
+            <td>25</td>
+        </tr>
+    </table>
+</body>
+ 
+</html>
+
+___________________________________________________________
+
+<table border="3" align="center" cellpadding="10" cellspacing="0" style="text-align:center;">
+    <tr>
+        <th>Roll no.</th>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Marks(English)</th>
+        <th>Marks(Science)</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Joe</td>
+        <td>3rd</td>
+        <td style="background-color: rgba(238, 253, 29, 0.514);">30</td>
+        <td style="background-color: rgba(238, 253, 29, 0.514);">30</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Nick</td>
+        <td style="background-color: rgba(87, 52, 241, 0.486);">4th</td>
+        <td>45</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Priyanka</td>
+        <td style="background-color: rgba(87, 52, 241, 0.486);">4th</td>
+        <td>40</td>
+        <td>50</td>
+    </tr>
+</table>
+
+____________________________________________________________
+
+
+_________________________________________________
+
+
+Display
+inline
+Attribute of
+<th> — table header — A header cell in a <table>.
+<td> — table data — A data cell in a <table>.
+What does colspan= do?
+Allows a single table cell to span the width of more than one cell or column.
+What does rowspan= do?
+Allows a single table cell to span the height of more than one cell or row.
+Why use colspan= or rowspan=?
+Sometimes it makes sense for a cell to span multiple columns or multiple rows. This might be used for a header cell that titles a group of columns, or a side-bar that groups rows of entries.
+Both colspan= and rowspan= are attributes of the two table-cell elements, <th> and <td>. They provide the same functionality as “merge cell” in spreadsheet programs like Excel.
+
+The value of either attribute must be a positive integer (a whole number). The value specifies the number of columns or rows that the cell fills.
+
+
+
+Read more: https://html.com/tables/rowspan-colspan/#ixzz8Qv3yenuD
+
+
+<table> <caption>Life Expectancy By Current Age</caption> <tr> <th colspan="2">65</th> <th colspan="2">40</th> <th colspan="2">20</th> </tr> <tr> <th>Men</th> <th>Women</th> <th>Men</th> <th>Women</th> <th>Men</th> <th>Women</th> </tr> <tr> <td>82</td> <td>85</td> <td>78</td> <td>82</td> <td>77</td> <td>81</td> </tr> </table>
+
+___________________________________________________________________________
+
+CSS (Cascading Style Sheet) 
+
+-> Allows you to apply styling for the given document controls and tags. 
+
+There are 3 types of css as 
+
+-> Inline stylesheet : Allows you to apply styling for the given tag or element. 
+
+-> internal stylesheet : Allows you to apply styling for the current page. Assume, we have a paragraph as all paragraphs need to come in same css structure, then we can define this in internal stylesheet. You can define internal stylesheet using 
+<style> </style> 
+
+-> external stylesheet : Allows you to apply styling and use that in multiple documents, then we need external stylesheet. 
+
+<div> : Division : Allows you to divide the page into multiple partitions. 
+
+In html, we have various design tags as 
+
+<header> </header> : Used to give header for entire page (like msword) 
+
+<footer> </footer> : Used to specify any end notes 
+
+<section> : Contains particular portion content of the given page. 
+
+<article> : Contains various article details for the given page. 
+
+
+
+
