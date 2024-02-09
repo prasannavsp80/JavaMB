@@ -1,0 +1,687 @@
+<!doctype html>
+<title>Example</title>
+<style>
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+.grid img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+</style>
+<main class="grid">
+  <img src="/pix/samples/23m.jpg" alt="Sample photo">
+  <img src="/pix/samples/24m.jpg" alt="Sample photo">
+  <img src="/pix/samples/22l.jpg" alt="Sample photo">
+  <img src="/pix/samples/15l.jpg" alt="Sample photo">
+  <img src="/pix/samples/25m.jpg" alt="Sample photo">
+  <img src="/pix/samples/16l.jpg" alt="Sample photo">
+</main>
+_____________________________________________________
+
+<!doctype html>
+<title>Example</title>
+<style>
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+.grid img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+</style>
+<main class="grid">
+  <img src="/pix/samples/1m.jpg" alt="Sample photo">
+  <img src="/pix/samples/24m.jpg" alt="Sample photo">
+  <img src="/pix/samples/9m.jpg" alt="Sample photo">
+  <img src="/pix/samples/12m.jpg" alt="Sample photo">
+  <img src="/pix/samples/6m.jpg" alt="Sample photo">
+  <img src="/pix/samples/25m.jpg" alt="Sample photo">
+</main>
+
+__________________________________________________________
+
+<!doctype html>
+<title>Example</title>
+<style>
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));;
+  grid-gap: 10px;
+  align-items: start;
+  justify-items: center;
+  margin: auto;
+  width: 540px;
+  }
+.grid img {
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+.grid img:nth-child(6) {
+  grid-column: span 5;
+  }
+</style>
+<main class="grid">
+  <img src="/pix/samples/22m.jpg" alt="Sample photo">
+  <img src="/pix/samples/23m.jpg" alt="Sample photo">
+  <img src="/pix/samples/24m.jpg" alt="Sample photo">
+  <img src="/pix/samples/25m.jpg" alt="Sample photo">
+  <img src="/pix/samples/15m.jpg" alt="Sample photo">
+  <img src="/pix/samples/17l.jpg" alt="Sample photo">
+  <img src="/pix/samples/27m.jpg" alt="Sample photo">
+  <img src="/pix/samples/28m.jpg" alt="Sample photo">
+  <img src="/pix/samples/26m.jpg" alt="Sample photo">
+  <img src="/pix/samples/30m.jpg" alt="Sample photo">
+  <img src="/pix/samples/31m.jpg" alt="Sample photo">
+</main>
+
+_________________________________________________________
+
+<!doctype html>
+<title>Example</title>
+<style>
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 10px;
+  align-items: start;
+  justify-items: center;
+  margin: auto;
+  width: 540px;
+  }
+.grid img {
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+.grid img:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 2;
+  }
+</style>
+<main class="grid">
+  <img src="/pix/samples/22m.jpg" alt="Sample photo">
+  <img src="/pix/samples/23l.jpg" alt="Sample photo">
+  <img src="/pix/samples/24m.jpg" alt="Sample photo">
+  <img src="/pix/samples/6m.jpg" alt="Sample photo">
+  <img src="/pix/samples/1m.jpg" alt="Sample photo">
+  <img src="/pix/samples/25m.jpg" alt="Sample photo">
+  <img src="/pix/samples/15m.jpg" alt="Sample photo">
+  <img src="/pix/samples/27m.jpg" alt="Sample photo">
+  <img src="/pix/samples/28m.jpg" alt="Sample photo">
+  <img src="/pix/samples/26m.jpg" alt="Sample photo">
+</main>
+
+______________________________________________
+
+<!doctype html>
+<title>Example</title>
+<style>
+  .myForm {
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-auto-flow: row;
+    grid-gap: .8em;
+    background: #eee;
+    padding: 1.2em;
+  }
+  .myForm > label  {
+    grid-column: labels;
+    grid-row: auto;
+  }
+  .myForm > input,
+  .myForm > textarea,
+  .myForm > button {
+    grid-column: controls;
+    grid-row: auto;
+    border: none;
+    padding: 1em;
+  }
+</style>
+<form class="myForm">
+  <label for="customer_name">Name </label>
+  <input type="text" name="customer_name" id="customer_name" required>
+  <label for="email_address">Email </label>
+  <input type="email" name="email_address" id="email_address">
+  <label for="comments">Comments</label>
+  <textarea name="comments" id="comments" maxlength="500"></textarea>
+  <button>Submit</button>
+</form>
+________________________________________________
+
+<!doctype html>
+<title>Example</title>
+<link href="https://fonts.googleapis.com/css?family=Unkempt" rel="stylesheet">
+<style>
+  .myForm > * {
+   font: 1.4em 'Unkempt', sans-serif; 
+  }
+  .myForm {
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-auto-flow: row;
+    grid-gap: .8em .5em;
+    background: beige;
+    padding: 1.2em;
+    width: 36em;
+  }
+  .myForm > label,
+  .myForm > fieldset  {
+    grid-column: labels;
+    grid-row: auto;
+  }
+  .myForm > input, 
+  .myForm > select,
+  .myForm > textarea,
+  .myForm > button {
+    grid-column: controls;
+    grid-row: auto;
+    padding: .4em;
+    border: 0;
+  }
+  .myForm > fieldset {
+    grid-column: span 2;
+  }  
+  .myForm > button {
+    background: darkkhaki;
+    color: white;
+    }
+  .myForm > textarea {
+    min-height: 3em;
+    }
+</style>
+<form class="myForm">
+  <label for="customer_name">Name </label>
+  <input type="text" name="customer_name" id="customer_name" required>
+
+  <label for="phone_number">Phone </label>
+  <input type="tel" name="phone_number" id="phone_number">
+
+  <label for="email_address">Email </label>
+  <input type="email" name="email_address" id="email_address">
+
+  <fieldset>
+    <legend>Which taxi do you require?</legend>
+    <label> <input type="radio" name="taxi" id="taxi_car" required value="car"> Car </label>
+    <label> <input type="radio" name="taxi" id="taxi_van" required value="van"> Van </label>
+    <label> <input type="radio" name="taxi" id="taxi_tuk" required value="tuktuk"> Tuk Tuk </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Extras</legend>
+    <label> <input type="checkbox" name="extras" id="extras_baby" value="baby"> Baby Seat </label>
+    <label> <input type="checkbox" name="extras" id="extras_wheel" value="wheelchair"> Wheelchair Access </label>
+    <label> <input type="checkbox" name="extras" id="extras_tip" value="tip"> Stock Tip </label>
+  </fieldset>
+
+  <label for="pickup_time">Pickup Date/Time</label>
+  <input type="datetime-local" name="pickup_time" id="pickup_time" required>
+
+  <label for="pickup_place">Pickup Place</label>
+  <select name="pickup_place" id="pickup_place">
+    <option value="" selected="selected">Select One</option>
+    <option value="office" >Taxi Office</option>
+    <option value="town_hall" >Town Hall</option>
+    <option value="telepathy" >We'll Guess!</option>
+  </select>
+
+  <label for="dropoff_place">Dropoff Place</label>
+  <input type="text" name="dropoff_place" id="dropoff_place" required list="destinations">
+
+  <datalist id="destinations">
+    <option value="Airport">
+    <option value="Beach">
+    <option value="Fred Flinstone's House">
+  </datalist>
+
+  <label for="comments">Special Instructions</label>
+  <textarea name="comments" id="comments" maxlength="500"></textarea>
+
+  <button>Submit Booking</button>
+
+</form>
+
+____________________________________________________________
+
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .myForm {
+    display: grid;
+    grid-template-areas: 
+      "contact comments"
+      "... button";
+  	grid-template-rows: 12em 2em;  
+  	grid-template-columns: 12em 1fr;
+    grid-gap: .8em;
+    background: #eee;
+    padding: 1.2em;
+  }
+  .myForm label  {
+    grid-area: labels;
+  }
+  .myForm input {
+    grid-area: contact;
+   	width: 100%;
+    padding: 1.1em;
+    border: none;
+    margin-bottom: 1em;
+  }
+  .myForm textarea {
+   min-height: calc(100% - 2em);
+   width: 100%;
+   border: none;
+  }
+  #contact-details {
+   grid-area: contact;
+  }
+  #comment-box {
+   grid-area: comments;
+  }
+  .myForm button {
+    grid-area: button;
+    border: 0;
+    background: gray;
+    color: white;
+  }
+</style>
+<form class="myForm">
+  <div id="contact-details">
+  <label for="customer_name">Name </label>
+  <input type="text" name="customer_name" id="customer_name" required>
+  <label for="email_address">Email </label>
+  <input type="email" name="email_address" id="email_address">
+  <label for="phone">Phone </label>
+  <input type="tel" name="phone" id="phone">
+  </div>
+  <div id="comment-box">
+  	<label for="comments">Comments</label>
+  	<textarea name="comments" id="comments" maxlength="500"></textarea>
+  </div>
+  <button>Submit</button>
+</form>
+
+_________________________________________________________
+
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .myForm {
+    display: grid;
+    grid-template-areas: 
+      "comments contact"
+      "... button";
+  	grid-template-rows: 12em 2em;  
+  	grid-template-columns: 12em 1fr;
+    grid-gap: .8em;
+    background: #eee;
+    padding: 1.2em;
+  }
+  .myForm label  {
+    grid-area: labels;
+  }
+  .myForm input {
+    grid-area: contact;
+   	width: 100%;
+    padding: 1.1em;
+    border: none;
+    margin-bottom: 1em;
+  }
+  .myForm textarea {
+   min-height: calc(100% - 2em);
+   width: 100%;
+   border: none;
+  }
+  #contact-details {
+   grid-area: contact;
+  }
+  #comment-box {
+   grid-area: comments;
+  }
+  .myForm button {
+    grid-area: button;
+    border: 0;
+    background: gray;
+    color: white;
+  }
+</style>
+<form class="myForm">
+  <div id="contact-details">
+  <label>Name 
+  	<input type="text" name="customer_name" id="customer_name" required>
+  </label>
+  <label>Email 
+  	<input type="email" name="email_address" id="email_address">
+  </label>
+  <label>Phone 
+  	<input type="tel" name="phone" id="phone">
+  </label>
+  </div>
+  <div id="comment-box">
+  	<label>Comments
+  	<textarea name="comments" id="comments" maxlength="500"></textarea>
+    </label>
+  </div>
+  <button>Submit</button>
+</form>
+
+_______________________________________________________
+
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .myForm {
+    display: grid;
+    grid-template-areas: 
+      "customer taxi"
+      "customer extras"
+      "pickup dropoff"
+      "instructions instructions"
+      "submit submit";
+  	grid-template-columns: auto auto;  
+  	grid-template-rows: auto auto auto auto;
+    grid-gap: .8em .5em;
+    background: #eee;
+    padding: 1.2em;
+  }
+  .myForm textarea {
+    height: calc(100% - 1.5em);
+    }
+  .myForm button {
+    background: gray;
+    color: white;
+    padding: 1em;
+    }
+  .myForm input:not([type=radio]):not([type=checkbox]), 
+  .myForm textarea, 
+  .myForm select {
+   	width: 100%;
+    border: 0;
+    padding: 1em;
+    margin: .5em 0;
+  }
+  .myForm label {
+   display: block; 
+  }
+  fieldset {
+    border: 0;
+  }
+  #customer {
+    grid-area: customer;
+  }
+  #taxi {
+    grid-area: taxi;
+  }
+  #extras {
+    grid-area: extras;
+  }
+  #pickup {
+    grid-area: pickup;
+  }
+  #dropoff {
+    grid-area: dropoff;
+  }
+  #instructions {
+    grid-area: instructions;
+  }
+  #submit {
+    grid-area: submit;
+  }
+</style>
+<form class="myForm">
+  <fieldset id="customer">
+    <label for="customer_name">Name </label>
+    <input type="text" name="customer_name" id="customer_name" required>
+
+    <label for="phone_number">Phone </label>
+    <input type="tel" name="phone_number" id="phone_number">
+
+    <label for="email_address">Email </label>
+    <input type="email" name="email_address" id="email_address">
+  </fieldset>
+  <fieldset id="taxi">
+    <legend>Which taxi do you require?</legend>
+    <label> <input type="radio" name="taxi" id="taxi_car" required value="car"> Car </label>
+    <label> <input type="radio" name="taxi" id="taxi_van" required value="van"> Van </label>
+    <label> <input type="radio" name="taxi" id="taxi_tuk" required value="tuktuk"> Tuk Tuk </label>
+  </fieldset>
+
+  <fieldset id="extras">
+    <legend>Extras</legend>
+    <label> <input type="checkbox" name="extras" id="extras_baby" value="baby"> Baby Seat </label>
+    <label> <input type="checkbox" name="extras" id="extras_wheel" value="wheelchair"> Wheelchair Access </label>
+    <label> <input type="checkbox" name="extras" id="extras_tip" value="tip"> Stock Tip </label>
+  </fieldset>
+  
+  <fieldset id="pickup">
+    <label for="pickup_time">Pickup Date/Time</label>
+    <input type="datetime-local" name="pickup_time" id="pickup_time" required>
+
+    <label for="pickup_place">Pickup Place</label>
+    <select name="pickup_place" id="pickup_place">
+      <option value="" selected="selected">Select One</option>
+      <option value="office" >Taxi Office</option>
+      <option value="town_hall" >Town Hall</option>
+      <option value="telepathy" >We'll Guess!</option>
+    </select>
+  </fieldset>
+
+  <fieldset id="dropoff">
+  <label for="dropoff_place">Dropoff Place</label>
+    <input type="text" name="dropoff_place" id="dropoff_place" required list="destinations">
+
+    <datalist id="destinations">
+      <option value="Airport">
+      <option value="Beach">
+      <option value="Fred Flinstone's House">
+    </datalist>
+  </fieldset>
+  
+  <fieldset id="instructions">
+    <label for="comments">Special Instructions</label>
+    <textarea name="comments" id="comments" maxlength="500"></textarea>
+  </fieldset>
+
+  <button id="submit">Submit Booking</button>
+
+</form>
+_____________________________________________________________
+
+<!doctype html>
+<title>Example</title>
+<style>
+#outer-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+}
+#outer-grid > div {
+  background-color: limegreen;
+  color: white;
+  font-size: 4vw;
+  padding: 8px;
+}
+#inner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+#inner-grid > div {
+  background: lightgreen;
+  padding: 8px;
+}
+</style>
+<div id="outer-grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div id="inner-grid">
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+  </div>
+</div>
+
+___________________________________________________
+
+https://www.quackit.com/css/grid/examples/
+
+________________________________________________________
+
+SVG defines vector-based graphics in XML format.
+
+What is SVG?
+SVG stands for Scalable Vector Graphics
+SVG is used to define graphics for the Web
+SVG is a W3C recommendation
+
+__________________________________________________________
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+</body>
+</html>
+
+________________________________________________________
+
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+
+__________________________________________________________
+
+<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+__________________________________________________________
+
+<svg height="130" width="500">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+https://onextrapixel.com/examples-of-svg-animations/
+
+______________________________________________________________
+
+
+    <form class="form1" action="">
+      <label for="firstName" class="first-name">First Name</label>
+      <input id="firstName" type="text">
+
+      <label for="lastName" class="last-name">Last Name</label>
+      <input id="lastName" type="text">
+
+      <label for="job">Job</label>
+      <input id="job" type="text">
+
+      <label for="age">Age</label>
+      <input id="age" type="text">
+
+      <label for="email">Email</label>
+      <input id="email" type="email">
+
+      <button>Submit</button>
+    </form>
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+form input {
+  margin-bottom: 1rem;
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+form button {
+  background: lightgrey;
+  padding: 0.7em;
+  border: 0;
+}
+form button:hover {
+  background: gold;
+}
+
+label {
+  text-align: right;
+  display: block;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+
+input {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+input:focus {
+  outline: 3px solid gold;
+}
+
+@media (min-width: 400px) {
+  form {
+    overflow: hidden;
+  }
+
+  label {
+    float: left;
+    width: 200px;
+  }
+
+  input {
+    float: left;
+    width: calc(100% - 200px);
+  }
+
+  button {
+    float: right;
+    width: calc(100% - 200px);
+  }
+}
+
+
