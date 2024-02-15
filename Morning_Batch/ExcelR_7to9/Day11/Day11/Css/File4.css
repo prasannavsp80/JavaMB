@@ -1,0 +1,15 @@
+p#p1 {
+    white-space: nowrap;
+width: 700px;
+border: 1px solid #000000;
+overflow: hidden;
+text-overflow: clip;
+}
+
+p#p2 {
+    white-space: nowrap;
+    width: 700px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
