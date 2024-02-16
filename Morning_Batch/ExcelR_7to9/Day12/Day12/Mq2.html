@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            body {
+             background-color: tan;
+             color: black;
+            }
+            @media screen and (max-width:900px) {
+                body {
+                 background-color: blue;
+                 color: white;
+                }
+            }
+            @media screen and (max-width:600px) {
+                body {
+                 background-color: yellow;
+                 color: green;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <p>
+        Welcome to Media Queries 
+        The mediatype is optional (if omitted, it will be set to all). However, if you use not or only, you must also specify a mediatype.
+
+The result of the query is true if the specified media type matches the type of device the document is being displayed on and all media features in the media query are true. When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.
+
+Meaning of the not, only, and and keywords:
+
+not: This keyword inverts the meaning of an entire media query.
+
+only: This keyword prevents older browsers that do not support media queries from applying the specified styles. It has no effect on modern browsers.
+
+and: This keyword combines a media type and one or more media features.
+    </p>
+</body>
+</html>
