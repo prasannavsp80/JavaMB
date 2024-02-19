@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+	
+		transform:         translateY(0)
+	}
+	40% {
+		transform:         translateY(-30px)
+	}
+	60% {
+		transform:         translateY(-15px)
+	}
+}
+span {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 180px;
+  width: 180px;
+  background-color: red;  
+  border-radius: 50%;
+  line-height: 180px;
+  text-align: center;
+  text-transform: uppercase;
+  animation-duration: 1s;
+
+  animation-fill-mode: both;
+
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  color: white;
+}
+span:hover {
+  cursor: pointer;
+  animation-name: bounce;
+
+}
+        </style>
+    </head>
+<body>
+    <div class="wrapper">
+        <span class="bounce_button">Hover Me</span>
+       </div>      
+</body>
+</html>
