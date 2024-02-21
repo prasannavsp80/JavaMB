@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var sname;
+                sname = frmData.sname.value;
+                document.getElementById("result").innerHTML="<b> Student Name " +sname + "</b>";
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmData">
+        <center>
+            <label>
+                Enter Your Name : 
+            </label>
+            <input type="text" name="sname" />
+            <br/><br/>
+            <input type="button" value="Show" onclick="show()" /> <br/>
+            <span id="result"></span>
+        </center>
+    </form>
+</body>
+</html>

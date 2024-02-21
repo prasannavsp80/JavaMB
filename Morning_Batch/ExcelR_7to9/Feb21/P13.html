@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            div.main {
+                display: grid;
+                grid: auto auto auto auto;   
+                grid-gap: 10px;   
+                background-color: blue;   
+                padding: 10px;   
+            }
+            .num1, .num2, .num3, .num4 {   
+                background-color: lightblue;   
+                text-align: center;   
+                color: black;  
+                padding: 10px 10px;   
+                font-size: 30px;   
+            }  
+        </style>
+        <script>
+            function num1() {
+                alert("You Clicked On First Division...");
+            }
+            function hide() {
+                document.getElementById("num3").style.visibility = "hidden";
+            }
+            function show() {
+                document.getElementById("num3").style.visibility = "visible";
+            }
+        </script>
+    </head>
+<body>
+    <div class="main">   
+        <div class="num1" onclick="num1()">First Division</div>   
+        <div class="num2" id="num2" onclick="hide()">Second Division/Hide ThirdOne</div>   
+        <div class="num3" id="num3">Third Division</div>       
+        <div class="num4" id="num4" onclick="show()">Fourth Division/Show ThirdOne</div>   
+    </div>   
+</body>
+</html>

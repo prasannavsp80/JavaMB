@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style>
+            div.main {
+                display: grid;
+                grid: auto auto auto / auto auto;   
+                grid-gap: 10px;   
+                background-color: blue;   
+                padding: 10px;
+                margin-left: 300px;
+                margin-top: 100px;;
+                height: 300px;
+                width: 600px;
+            }
+            .num {   
+                background-color: lightblue;   
+                text-align: center;   
+                color: black;  
+                padding: 10px;   
+                font-size: 24px;   
+            }  
+        </style>
+        <script>
+            function show() {
+                var firstName, lastName, fullName;
+                firstName = frmData.firstName.value;
+                lastName = frmData.lastName.value;
+                fullName = firstName + " " +lastName;
+                frmData.fullName.value = fullName;
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmData">
+    <div class="main">   
+        <div class="num">
+            <label>
+                First Name
+            </label>
+        </div>   
+        <div class="num">
+            <input type="text" name="firstName" />
+        </div>   
+        <div class="num">
+            <label>
+                Last Name
+            </label>
+        </div>      
+        <div class="num">
+            <input type="text" name="lastName" onblur="show()" />
+        </div>   
+        <div class="num">
+            <label>Full Name</label>
+        </div>   
+        <div class="num">
+            <input type="text" name="fullName" />
+        </div>   
+    </div>   
+</form>
+</body>
+</html>
