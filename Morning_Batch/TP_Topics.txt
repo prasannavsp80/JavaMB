@@ -1,0 +1,19 @@
+Abhilash -> HTML Tables
+Dharshanth -> HTML DIV and SPAN
+Geethika -> CSS Box Model
+Jhansi -> HTML Frames
+Karunakar -> HTML OrderdList
+Keerthi -> HTML Images and Anchor Tag
+Komal -> CSS Flex
+Nupur -> CSS Inline tags
+Pawan -> HTML Registration form
+Prashanthi -> HTML Div/span/paragraph
+SaiSrinivas -> Radio buttons and Checkbox
+Satish -> Datalist and Mark 
+Somu -> Pattern in HTML
+Sunil G -> CSS External 
+Vamsi -> CSS ::after ::before
+Varun -> CSS Animations
+Veena -> CSS Grid
+VijayaRama -> HTML Forms
+Yamini -> Calculator Example

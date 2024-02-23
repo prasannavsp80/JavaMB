@@ -1,0 +1,34 @@
+
+
+we have 2 http methods in forms known as
+
+get  -> Uses http get protocol, which used to display
+all values passed in form as url. It is a bit insecure,
+as the values are visible, some securable data passing
+that time don't prefer this method.
+
+post -> uses Http Post method, whatever values you are
+passing are not displayed as part of url, as post method 
+is hightly secure
+
+eval() : Allows you to evaluate any mathematical expression. 
+
+In Javascript, we have various predefined functions as
+
+1) number functions : Can be accessable by using Math library
+
+Math.abs() : 
+
+2) String functions
+
+length() : returns total no.of chars
+
+indexOf() : Used to display first occurrence of given char. It returns -1 once the 		char not found.
+
+
+charAt(5) : Display's char at 5th position. 
+
+
+
+3) Date Functions 
+
