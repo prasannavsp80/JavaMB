@@ -1,0 +1,152 @@
+
+
+
+Arrays : An array is the finite ordered set of homogeneous elements, 
+means all the elements belongs to same data type. 
+
+All the elements of array are stored in successive memory locataions. 
+
+int[] a = new int[]{3,56,22,55}; means
+
+a[0]=3;
+a[1]=56;
+a[2]=22;
+a[3]=55;
+
+int[] a = new int[] {12,5,22,66,23};
+//		for(int i=0;i<a.length;i++) {
+//			System.out.println(a[i]);
+//		}
+		for (int i : a) {
+			System.out.println(i);
+		}
+
+foreach loop internally works with enumeration collection. 
+
+At first variable i points to the first element in array A, after processing first element, it checks next element is there or not by using hasMoreElements(), if hasMoreElements() returns true, it moves to the next element, by using nextElement(). It repeats as soon as hasMoreElements() returns true. 
+
+There are 2 types of memories known as 
+
+(i) STACK
+
+(ii) HEAP 
+
+*** value types will be stored in STACK memory and reference types will be stored in HEAP memory ***
+
+Strings are immutable, means once they are assigned we cannot alter the value. 
+
+(ii) Write a Program to generate current bill as read no.of units and calculate according to slabs
+
+	first 90 units 1rs
+
+	Next 91 to 150 units 1.5 rs
+	
+	151 to 200 units 2 rs
+
+	201 to 240 units 2.5 rs
+
+	240+  3 rs
+
+Then if no.of units are 160 
+
+(90 * 1) + (60 * 1.5) + (10 * 2)
+
+What is the default package in java : lang
+
+What is the top level class in java : Object 
+
+Object is having various methods as
+
+hashCode() : Displays memory location address number.
+
+toString() : This method will be called automatically
+once you print the object. 
+
+Method Overloading : The concept of using same method
+name w.r.t. different data types or different parameters
+known as method overloading. Here, the method name
+must be same, but no.of parameters or type of parameters
+we are using here are different. 
+
+class Test {
+   int a, b;
+   a = 5;
+   b = 7;
+}
+
+
+Constructor : A constructor is a special member which 
+used to initialize the member variables of the class. 
+
+It is special because it has the same name as that of 
+class name. 
+
+Rules : 
+_______
+
+  -> It will not contains any return type.
+ 
+  -> It will not return any value. 
+
+  -> It will be invoked automatically once the instance of the class created.
+
+  -> A constructor can be overloaded. 
+
+Types of Constructors : 
+________________________
+
+There are 2 types of constructors known as
+
+(i) static constructor : These are called class constructors, which are used to initialize the static variables of the class, these constructors are invoked automatically before control reaches the entry point, these constructors cannot be overloaded. 
+
+*** In java, we don't have any static constructors, as static { } acts as static constructor ***
+
+(ii) instance constructor : These are the constructors, that which are invoked automatically once the instance of the class created, these constructors cannot be overloaded. 
+
+Boxing and Unboxing : 
+_____________________
+
+The concept of converting value type to reference type konwn as boxing, and reference type to value type known as unboxing. 
+
+Object is the type, that which can be used for boxing and unboxing. 
+
+int x;
+
+x="Hello";
+x=12;
+x=12.5
+
+Object x;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
