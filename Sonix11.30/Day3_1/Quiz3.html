@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function test() {
+                var x = 12;
+                var y = x++ + ++x + x++ + --x;
+                // Memory 13   14   15   14
+                // Actual 12 + 14 + 14 + 14 
+                alert(y);
+            }
+        </script> 
+    </head>
+<body onload="test()">
+
+</body>
+</html>

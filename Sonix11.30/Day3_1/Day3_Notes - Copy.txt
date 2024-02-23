@@ -1,0 +1,103 @@
+
+
+HTML will not perform 
+
+
+	-> Validations
+
+	-> Business Logic
+
+	-> Event-Based Programming 
+
+To implement those, we need the help of Javascript. 
+
+To start with javascript, use 
+
+<script>
+</script> 
+
+alert() -> Used to display message in dialog box. 
+document.writeln() -> Used to display message on document. 
+
+javascript code, to be added in functions. 
+
+function function_name() {
+...
+...
+...
+}
+
+How to call the methods...
+
+You can call these methods by using events. 
+
+onload() -> This event will be fired automatically once the page loaded.
+
+onclick() -> This event will be fired automatically once you click on 
+	button/div etc...
+
+How to declare variable in javascript ???
+___________________________________________
+
+var is the keyword that which allows you to declare variable. 
+
+var x = 12 // then it becomes int
+
+var str = "Sravani" // then it becomes string. 
+
+What is the difference between
+
+var x =  12;
+
+x++ (vs) ++x 
+
+postincrement (vs) PreIncrement 
+
+In PostIncrement, first it initializes the value, then it increments
+
+In PreIncrement, first it increments the value, then it assigns. 
+
+eval() : Used to evaluate the given mathematica expression final value.
+
+Control Structures : Used to define the flow of the program. 
+
+There are 2 types of control structures known as 
+
+	(i) Branching : 
+
+	if...else : Executes the statement(s) based on the condition.
+
+	 if (condition) {
+	     statement(s);
+	 } else {
+	     statement(s);
+	 }
+
+(i) Write a program to Check max. of 3 numbers 
+
+(ii) Write a Program to generate current bill as read no.of units and calculate according to slabs
+
+	first 90 units 1rs
+
+	Next 91 to 150 units 1.5 rs
+	
+	151 to 200 units 2 rs
+
+	201 to 240 units 2.5 rs
+
+	240+  3 rs
+
+Then if no.of units are 160 
+
+(90 * 1) + (60 * 1.5) + (10 * 2)
+
+
+	(ii) Looping 
+
+
+
+
+
+
+
+

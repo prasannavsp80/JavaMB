@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var status = frmTest.chkStatus.checked;
+                if (status==true) {
+                    alert("Present...");
+                } else {
+                    alert("Absent...");
+                }
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmTest">
+        <center>
+            Status : 
+            <input type="checkbox" name="chkStatus" onchange="show()" />
+        </center>
+    </form>
+</body>
+</html>
