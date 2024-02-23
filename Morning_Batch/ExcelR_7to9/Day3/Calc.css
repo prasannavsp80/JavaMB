@@ -1,0 +1,20 @@
+div.MainForm
+{
+	width : 400px;
+	padding : 10px;
+	margin : 10 auto;
+	border : 5px solid gray;
+	vertical-align : center;
+	background : #3366CC;
+	font-family : "DejaVu Sans",Times,Serif;
+	font-weight: bold;
+	text-align : center;
+	color : white;
+}
+div.title 
+{
+	font-size:60px;
+	color : #33CCFF;
+	font-family : "DejaVu Sans";
+	font-weight: bold;	
+}

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var res = frmData.firstName.value.toUpperCase();
+                // alert(res);
+                frmData.firstName.value = res;
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmData">
+        <center>
+            First Name : 
+            <input type="text" name="firstName" onblur="show()" /> <br/><br/>
+            Last Name : 
+            <input type="text" name="lastName" /> <br/><br/> 
+
+        </center>
+    </form>
+</body>
+</html>

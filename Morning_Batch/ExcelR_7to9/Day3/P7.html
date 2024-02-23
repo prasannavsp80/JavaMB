@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var message ="Welcome to Javascript...Trainer Prasanna...";
+                var result="";
+                result+="Length of String is  " +message.length + "<br/>";
+                result+="First Occurrence of Char 'o' is  " +message.indexOf("r") + "<br/>";
+                result+="Second Occurrence of char 'o' is " + message.indexOf("r", message.indexOf("r")+1); 
+                        + "<br/>";
+                result+="<br/>Char @ 5th Position  " +message.charAt(5) + "<br/>";
+                result+="Upper Case String is  " +message.toUpperCase() + "<br/>";
+                result+="Lower Case String is  " +message.toLowerCase() + "<br/>";
+                result+="Replaced String  " +message.replace("Javascript", "Java") + "<br/>";
+                result+="Substring is  " +message.substring(3, 10) + "<br/>";
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </head>
+<body onload="show()">
+    <span id="result"></span>
+</body>
+</html>

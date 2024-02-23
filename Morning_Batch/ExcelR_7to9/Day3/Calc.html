@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="Calc.css" />
+        <script>
+            function calc() {
+                var firstNo = parseInt(ipForm.txtFirstNo.value);
+                var secondNo = parseInt(ipForm.txtSecondNo.value);
+                var operator = ipForm.operator.value;
+                var result;
+                // alert(firstNo);
+                // alert(secondNo);
+                // alert(operator);
+                switch(operator) {
+                    case "Add" :
+                        result = firstNo + secondNo;
+                        break;
+                    case "Sub" : 
+                        result = firstNo - secondNo;
+                        break;
+                    case "Mul" : 
+                        result = firstNo * secondNo;
+                        break;
+                    case "Div" : 
+                        result = firstNo / secondNo;
+                        break;    
+                }
+                document.getElementById("result").innerHTML = parseInt(result);
+                ipForm.txtResult.value = parseInt(result);
+            }
+        </script>
+    </head>
+<body>
+    <div class = "title">
+        <p>Calculator @ Excelr</p>
+    </div>
+    <div class = "MainForm"  >		
+        <br/><br/>
+        <form name="ipForm" id = "inputForm1" action = "" method = "GET">
+             &nbsp;
+             1st Number : <input type = "text" name = "txtFirstNo"><br/><br/>			
+             2nd Number : <input type = "text" name = "txtSecondNo"><br/><br/>
+             Result : <input type="text" readonly name="txtResult" style="color: blue;background-color: yellow;" /> <br/><br/>
+             Operation :   
+                <select name="operator" onchange="calc()">
+                    <option value="Add">&nbsp&nbsp+&nbsp&nbsp</option>
+                    <option value="Sub">&nbsp&nbsp-&nbsp&nbsp</option>
+                    <option value="Mul">&nbsp&nbsp*&nbsp&nbsp</option>
+                    <option value="Div">&nbsp&nbsp/&nbsp&nbsp</option>
+                </select> <br/><br>
+                <span id="result" color="white" style="background-color: green;"></span>
+        </form>		
+    </div> 
+</body>
+</html>

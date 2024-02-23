@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            function quiz1() {
+                var p = 3;
+                var q = p++ + ++p + --p + ++p;
+                // Memory 4   5   4
+                // Actual 3 + 5 + 4 + 5 
+                alert(q);
+            }
+        </script>
+    </head>
+<body>
+    <script>
+        quiz1();
+    </script>
+</body>
+</html>
