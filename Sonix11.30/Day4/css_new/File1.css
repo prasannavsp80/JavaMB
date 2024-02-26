@@ -1,0 +1,14 @@
+p {
+    background-color: blue;
+    color: red;
+    font-size: 32pt;
+}
+h1 {
+    background-color: brown;
+    color: orange;
+    font-family: Garamond;
+}
+h3 {
+    color: aqua;
+    font-family: red;
+}

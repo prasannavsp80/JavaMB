@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <style>
+            p#original::before {
+                content: "You did Nice Job Attempted...  ";
+                color: green;
+                font-weight: bold;
+            }
+            p#excess::after {
+                content: "   This is Unnecessary...";
+                color: red;
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+<body>
+    <p id="original">This is Original Paragraph</p>
+    <p id="sample">This is Sample Paragraph</p>
+    <p id="excess">This is Excess Paragraph</p>
+</body>
+</html>

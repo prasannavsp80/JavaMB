@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+span[data-descr] {
+  position: relative;
+  text-decoration: underline;
+  color: #00f;
+  cursor: help;
+}
+span[data-descr]:hover::after,
+span[data-descr]:focus::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
+}
+        </style>
+    </head>
+<body>
+<p>
+    Here we have some
+    <span tabindex="0" 
+        data-descr="collection of words and punctuation">
+      text
+    </span>
+    with a few
+    <span tabindex="0" 
+        data-descr="small popups that appear when hovering">
+      tooltips</span>.
+    Welcome to 
+    <span tabindex="0" 
+        data-descr="Svit College from Secunderabad ClockTower">
+     Svit</span>.
+     
+  </p>
+  <p>
+    Hi I am <span tabindex="3" data-descr="Hi I am From SR Nagar Hyderabad">
+      Razvi
+    </span>
+  </p>
+</body>
+</html>

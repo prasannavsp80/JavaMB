@@ -1,0 +1,22 @@
+body
+{
+    background-color:blue;
+}
+
+p {
+    color:red;
+    border:1px solid black;
+    font-size:35pt;
+}
+
+div {
+    color:maroon;
+    border:1px dashed;
+    font-size:25pt;
+}
+
+h1 {
+    color:orange;
+    border:1px double;
+    font-size:26pt;
+}

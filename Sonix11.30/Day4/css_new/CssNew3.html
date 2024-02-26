@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+            }
+            
+input#numbers
+{
+	font-weight: bold;
+	font-size : 15px;
+	width : 50px;
+}
+input#operators
+{
+	width : 50px;
+	font-weight: bold;
+	color : red;
+	background : #CCCCCC;
+	font-size : 15px;
+}
+
+            p#heading {
+                font-size:60px;
+	            color : #33CCFF;
+	            font-family : "DejaVu Sans";
+	            font-weight: bold;
+            }
+            div#calc {
+                width : 250px;
+	            padding : 10px;
+	            margin : 10 auto;
+	            border : 5px solid gray;
+	            vertical-align : center;
+	            background : #3366CC;
+            }
+        </style>
+        <title>
+
+        </title>
+    </head>
+<body>
+    <p id="heading">Online Calculator</p>
+    <br/><br/>
+    <div id="calc">
+        <form name = "ipForm" size = 35 id = "CalculatorForm1" action = "" method = "GET">
+            <p id = "msg">...</p>
+            <input type = "text" value = "" readonly = "true" id = "display" id = "output">
+            <br/><br/><br/>
+            <input id = "numbers" type = "button" value = "   7   " id = "7" />
+            <input id = "numbers" type = "button" value = "   8   " id = "8" />
+            <input id = "numbers" type = "button" value = "   9   " id = "9" />
+            <input id = "operators" type = "button" value = "   +   " id = "a" />
+            
+            <br/>
+            <input id = "numbers" type = "button" value = "   4   " id = "4"  />
+            <input id = "numbers" type = "button" value = "   5   " id = "5" />
+            <input id = "numbers" type = "button" value = "   6   " id = "6" />
+            <input id = "operators" type = "button" value = "   -   " />
+            
+            <br/>
+            <input id = "numbers" type = "button" value = "   1   " />
+            <input id = "numbers" type = "button" value = "   2   " />
+            <input id = "numbers" type = "button" value = "   3   " />
+            <input id = "operators" type = "button" value = "   *   " />
+            
+            <br/>
+            <input id = "numbers" type = "button" value = "   0   " />				 
+            <input id = "numbers" type = "button" value = "   .   " />				 
+            <input id = "operators" type = "button" value = "C"  />	
+            
+            <input id = "operators" type = "button" value = "   /   " />
+            
+            <br/>					 			 
+            <br/>
+            <input id = "operators" type = "button" value = "   =   " />
+                         
+       </form>	
+
+    </div>
+</body>
+</html>

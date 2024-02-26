@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <style>
+            body
+{
+	background-color : #017890;
+}
+
+
+div.MainForm 
+{
+    background : none repeat scroll 0 0 #7DC24B;
+    border : 5px solid gray;
+    color : white;	
+    font-family : "DejaVu Sans",Times,Serif;
+    font-weight : bold;
+    margin : 10px auto;
+    padding : 10px;
+    /*text-align : right;
+    */
+	
+	width : 400px;	
+}
+
+.all
+{
+	font-weight : bold;
+	/*background : blue;*/
+	color : #0C69F3;
+}
+
+label.error
+{
+	color : red;
+}
+
+label.Mandatory
+{
+	color: black;    
+}
+
+label.Optional
+{
+	color: white;    
+}
+p.title 
+{
+    color: #33CCFF;
+    font-family: "DejaVu Sans";
+    font-size: 60px;
+    font-weight: bold;
+}
+        </style>
+    </head>
+<body>
+    <form name="frmLeave">
+        <table border="3" align="center">
+            <tr>
+                <th colspan="2">
+                    Leave Form
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Student Name : 
+                </th>
+                <td>
+                    <select name="sid">
+                        <option value="23P71A6666">Kavya</option>
+                        <option value="23P71A6699">Raheem</option>
+                        <option value="23P71A66A4">Razvi</option>
+                        <option value="23P71A6661">Aqib</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Reporting To : </th>
+                <td>
+                    <select name="reportTo">
+                        <option value="Jyothi Madam">Jyothi Madam</option>
+                        <option value="Sireesha Madam">Sireesha Madam</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Leave Start Date : </th>
+                <td>
+                    <input type="date" name="leaveStartDate" />
+                </td>
+            </tr>
+            <tr>
+                <th>Leave End Date : </th>
+                <td>
+                    <input type="date" name="leaveEndDate" />
+                </td>
+            </tr>
+            <tr>
+                <th>No.of Days  </th>
+                <td>
+                    <input type="number" readonly name="noOfDays" />
+                </td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>
+                    Male : 
+                    <input type="radio" name="gender" />
+                    Female : 
+                    <input type="radio" name="gender" />
+                </td>
+            </tr>
+            <tr>
+                <th>Leave Reason</th>
+                <td>
+                    <input type="text" name="leaveReason" list="reasons" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="Apply Leave" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="Reset" />
+                </th>
+            </tr>
+        </table>
+        <datalist id="reasons">
+            <option label="Fever" value="Fever and Cold" /> 
+            <option label="Not Wake Up" value="Not Wake Up" /> 
+            <option label="Marriage" value="Marriage Function" /> 
+            <option label="Exam Preparation" value="Exam Preparation" />
+        </datalist>
+    </form>
+</body>
+</html>

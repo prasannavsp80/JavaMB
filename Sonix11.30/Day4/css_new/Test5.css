@@ -1,0 +1,7 @@
+#box {
+    width: 250px;
+    height: 150px;
+    background: url("img1.JPG") no-repeat;
+    background-size: contain;
+    border: 6px solid #333;
+}

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+           
+        </style>
+    </head>
+<body>
+    <form name="frmLeaveForm">
+        <table id="t1" border="3" align="center">
+            <tr>
+                <th colspan="2">
+                    Leave Form
+                </th>
+            </tr>
+            <tr>
+                <th>Student Id</th>
+           
+            <td>
+                <select name="sid">
+                    <option value="23P71A6218">23P71A6218</option>
+                    <option value="23P71A6205">23P71A6205</option>
+                    <option value="23P71A6203">23P71A6203</option>
+                    <option value="23P71A6204">23P71A6204</option>
+                    <option value="23P71A6226">23P71A6226</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Reporting To</th>
+            <td>
+                <select name="reportTo">
+                    <option value="Select">Select</option>
+                    <option value="Rajeshwar">Rajeshwar Rao</option>
+                    <option value="Sravan">Sravan</option>
+                    <option value="Jyothi Madam">Hod</option>
+                    <option value="Prasanna Kumar">Prasanna</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Leave Start-Date</th>
+            <td>
+                <input type="date" name="leaveStartDate" />
+            </td>
+        </tr>
+        <tr>
+            <th>Leave End Date</th>
+            <td>
+                <input type="date" name="leaveEndDate" />
+            </td>
+        </tr>
+        <tr>
+            <th>Gender </th>
+            <td>
+                <select name="gender">
+                    <option value="Select">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Leave Reason</th>
+            <td>
+                <input type="text" list="reasons" name="reason" />
+            </td>
+        </tr>
+        <tr>
+            <th>Leave Status</th>
+            <td>
+                <select name="leaveStatus">
+                    <option value="PENDING">Pending</option>
+                    <option value="ACCEPTED">Accepted</option>
+                    <option value="REJECTED">Rejected</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="submit" value="Submit" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Reset" />
+            </th>
+        </tr>
+        </table>
+        <datalist id="reasons">
+            <option label="Fever" value="Fever and Cold" /> 
+            <option label="Not Wake Up" value="Not Wake Up" /> 
+            <option label="Marriage" value="Marriage Function" /> 
+            <option label="Exam Preparation" value="Exam Preparation" />
+        </datalist>
+    </form>
+</body>
+</html>
