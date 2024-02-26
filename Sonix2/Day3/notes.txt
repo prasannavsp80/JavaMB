@@ -1,0 +1,81 @@
+
+
+Constructor : A constructor is a special member, which used to initilize the member variables of the class.  It is special because it has the same name as that of class name. 
+
+Rules : 
+________
+
+	(i) It will not contains any return type
+
+	(ii) It will not return any value
+
+	(iii) It will be invoked automatically once the instance
+		of the class created
+
+	(iv) A constructor can be overloaded. 
+
+Types of Constructors : 
+_______________________
+
+There are 2 types of constructors known as
+
+	(i) static constructor : It is known as class constructor, which used to initialize the static variables of the class, these constructors are invoked automatically before control reaches the entry point.  These constructors cannot be overlaoded. 
+
+*** In java, we don't have any static constructors, as static block acts as static constructor ***
+
+	(ii) instance constructor : These are the constructors that which are invokeed automatically once the instance of the class created. These constructors can be overloaded. 
+
+static variable : static variables are called class variable, these are variables that which retains values irrespective of type of object. 
+
+Inheritance : The concept of deriving a new class from already existing class known
+as inheritance, the class which derived known as derived class, the class from which its derived known as base class. Through inheritance, we can reduce the size of the program. Inheritance can be achieved by using extends keyword.
+
+class First {
+...
+...
+...
+}
+
+class Second extends First {
+...
+...
+...
+}
+
+Once you create an object to Second class, then you can access
+
+all public/protected and friendly members of base class. 
+
+super : If you want to pass values from derived class to base class, then we need the help of super keyword. 
+
+It has 2 forms as 
+
+	(i) super as a keyword 
+
+	(ii) super as a class 
+
+Abstract Class : 
+_________________
+
+A class that which can be created, but not implemented and 
+instantiated known as abstract class. Abstract class contains
+abstract/non-abstract methods, abstract methods needs to be 
+overrided mandetorily by the derived class. 
+
+You cannot create an object to the abstract class. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
