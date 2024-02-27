@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var doj = frmData.doj.value;
+                alert("Selected Date is " +doj);
+            }
+        </script>
+    </head>
+<body>
+    <form method="get" name="frmData">
+        <center>
+            Date of Join : 
+            <input type="date" name="doj" /> <br/><br/>
+            <input type="button" value="Show" onclick="show()" />
+        </center>
+    </form>
+</body>
+</html>

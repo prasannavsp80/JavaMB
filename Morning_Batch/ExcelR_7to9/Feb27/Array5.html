@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+            var questions = [
+                "1. C Language implemented By",
+                "2. Javascript is Scripting language/Programming Langauge",
+                "3. CSS Stands for",
+                "4. Responsive Pages can be done By Grid/Flex",
+                "5. HTML Stands for"
+            ]
+            var questionNo = 0;
+            var totalQuestions = questions.length;
+            function loadQuestion() {
+                document.getElementById("question").innerHTML = questions[questionNo];
+            }
+            function nextQuestion() {
+                questionNo++;
+                if (questionNo == totalQuestions) {
+                    questionNo = 0;
+                }
+                loadQuestion();
+            }
+            function prevQuestion() {
+                questionNo--;
+                if (questionNo < 0) {
+                   questionNo =totalQuestions -1;
+                }
+                loadQuestion();
+            }
+        </script>
+    </head>
+<body onload="loadQuestion()">
+    <p id="question"></p> <br/><br/>
+    <input type="button" value="Next" onclick="nextQuestion()" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" value="Previous" onclick="prevQuestion()" />
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var message="";
+                var array =["Yamini",function() {return "Excelr";},
+                    {email:"yamini@gmail.com",phone:"888523333"}
+                    ];
+                message+="First value  " +array[0] + "<Br/>";
+                message+="Function Value   " +array[1]()+ "<br/>";
+                message+="Email is  " +array[2].email + "<br/>";
+                message+="Phone No  " +array[2].phone + "<br/>";
+                document.getElementById("message").innerHTML = message;
+            //    alert(array[0]);
+            //    alert(array[1]());
+            //    alert("Email Address " +array[2].email);
+            //    alert("Phone No  " +array[2].phone);
+            }
+        </script>
+    </head>
+<body onload="show()">
+    <span id="message"></span>
+</body>
+</html>
