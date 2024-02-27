@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script>
+            function doLogin() {
+                var user, pwd;
+                user = frmLogin.userName.value;
+                pwd = frmLogin.passWord.value;
+                if (user=="Siva" && pwd == "Krishna") {
+                    // alert("Correct Credentials...");
+                    window.open("http://www.google.com");
+                } else {
+                    alert("Invalid Credentials...");
+                }
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmLogin">
+        <table border="3" align="center">
+            <tr>
+                <th colspan="2">
+                    Login Page
+                </th>
+            </tr>
+            <tr>
+                <th>User Name</th>
+                <td>
+                    <input type="text" name="userName" autofocus /> 
+                </td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>
+                    <input type="password" name="passWord" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Login" onclick="doLogin()" /> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="Reset" />
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

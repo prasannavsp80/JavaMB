@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var sno = frmTest.sno.value;
+                if (sno%2==0) {
+                    alert("Even Number...");
+                } else {
+                    alert("Odd Number");
+                }
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmTest">
+        <center>
+            Enter a Number : 
+            <input type="number" name="sno" /> <br/><br/>
+            <input type="button" value="Show" onclick="show()" />
+        </center>
+    </form>
+</body>
+</html>

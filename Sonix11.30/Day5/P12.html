@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var gen = frmData.gender.value;
+                alert("Selected Gender " +gen);
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmData">
+        <center>
+            Gender : 
+            <input type="radio" name="gender" value="Male" onchange="show()" /> Male 
+            <input type="radio" name="gender" value="Female" onchange="show()" /> Female
+        </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+
+onblur() : This even acts as lostfocus. 
+
+As once you move from cursor of any control, you need
+to execute some lines of code, then we need the help
+of onblur(). 
+
+Control Structures : used to define the flow of the program. 
+
+There are 2 types of control structures known as
+
+(i) Branching
+
+	if...else : Executes the statement(s) based on the condition.
+
+		if (condition) {
+			statement(s);
+		} else {
+		   statement(s);
+		}
+
+switch...case : Implements the menu-driven programs. Here, we need to use break keyword to come out of the control structure. 
+
+12
+
+"12"
+
+Write a Program to accept a grade, and 
+
+if grade is "I" or "A" or 'a' print 'Grade A'
+if grade is "II" or "B" or 'b' print 'Grade B'
+if grade is "III" or "C" or 'c' print 'Grade C'
+else print 'Invalid Grade'
+
+How to get form values
+
+formName.controlName.value;
+
+(ii) Looping 
+
+forloop : Executes the statements repeatedly until the condition remains true, if the condition remains false, then it comes out of the loop.
+
+for(initialization;condition;increment/decrement) {
+   statement(s);
+}
+
+There are pre-defined functions as 
+___________________________________
+
+  (i) String Functions : 
+
+	indexOf() -> Display's the first occurrence of given char. 
+
+ (ii) Number Functions : Numbers functions are accessable by using Math library. 
+
+	abs() : Returns the absolute value. 
+
+(iii) Date Functions 
+
+	You can create date operations as 
+
+	var obj = new Date();
+
+Then it creates a date w.r.t. Today's date. 
+
+

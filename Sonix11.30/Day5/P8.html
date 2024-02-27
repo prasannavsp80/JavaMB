@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var message = "";
+                var choice = parseInt(frmData.choice.value);
+                // alert(choice);
+                switch(choice) {
+                    case 1 : 
+                        message = "Hi I am Venkatesh...";
+                        // alert("Met");
+                        break;
+                    case 2 : 
+                        message = "Hi I am Nikhilesh...";
+                        break;
+                    case 3 : 
+                        message = "Hi I am Rajasekhar...";
+                        break;
+                    case 4 : 
+                        message = "Hi I am Ramesh...";
+                        break;
+                    case 5 : 
+                        message = "Hi I am Sravani...";
+                        break;
+                    default : 
+                        message = "Invalid Choice...";
+                        break;
+                        document.getElementById("result").innerHTML = message;
+                }
+                // alert(message);
+                document.getElementById("result").innerHTML = message;
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmData">
+        <center>
+            Choice : 
+            <input type="number" name="choice" /> <br/><br/>
+            <input type="button" value="Show" onclick="show()" /> <br/><br/>
+            <span id="result"></span>
+        </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var result = "";
+                var grade = frmGrade.grade.value;
+                switch(grade) {
+                    case 'I' :
+                    case 'i' : 
+                    case 'A' :
+                    case 'a' :
+                        result = "Grade A";
+                        break;
+                    case 'II' :
+                    case 'ii' : 
+                    case 'B' :
+                    case 'b' :
+                        result = "Grade B";
+                        break;
+
+                    case 'III' :
+                    case 'iii' : 
+                    case 'C' :
+                    case 'c' :
+                        result = "Grade C";
+                        break;
+                }
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmGrade">
+        <center>
+            Grade : 
+            <input type="text" name="grade" /> <br/><br/>
+            <input type="button" value="Show" onclick="show()" /> 
+            <br/><br/>
+            <span id="result"></span>
+        </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var message = "";
+                var choice = frmData.choice.value;
+                if (choice==1) {
+                    message = "Hi I am Satya...<br/>";
+                } else if (choice == 2) {
+                    message = "Hi I am Sravani...<br/>";
+                } else if (choice == 3) {
+                    message = "Hi I am Jogeswara...<br/>";
+                } else if (choice ==4) {
+                    message = "Hi I am Madhuri...<br/>";
+                } else {
+                    message = "Invalid Choice...";
+                }
+                document.getElementById("message").innerHTML = message;
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmData">
+        <center>
+            Choice : 
+            <input type="number" name="choice" onclick="show()" /> <br/><br/>
+            <span id="message"></span>
+        </center>
+    </form>
+</body>
+</html>
