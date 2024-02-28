@@ -1,0 +1,55 @@
+
+
+
+What are the top level interfaces ???
+
+List 
+
+Set
+
+SortedSet : Allows you to sort the given data.
+
+TreeSet is falling under SortedSet interface.
+
+1) Multiplication of 2 numbers 100digit number * 100 digit 
+number exact value
+
+2) Write a program to read number from 1 to 9999 and print
+in english words
+
+Ex : 123
+	One Hundred Twenty Three
+
+     4000
+	Four thousand
+   
+     567
+
+	Five hundred Sixty Seven
+
+     900
+
+	Nine Hundred
+
+     10
+	Ten
+
+3) Write a program to Display your number in roman format from
+1 to 1000
+
+4) Create a class as Student (sid int, sname String, 
+				city String, cgp double) and add 5 to 6 records
+
+	Sort them by usig sname, cgp 
+
+
+Map interface allows you to store data w.r.t. key/value pairs 
+
+HashTable and HashMap are falling under Map interface. 
+
+Map map = new HashMap();
+
+put() method used to add elements into this. 
+
+
+
