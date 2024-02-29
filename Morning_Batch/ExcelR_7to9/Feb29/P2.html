@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var sid = localStorage.getItem("sid");
+                var sname = localStorage.getItem("sname");
+                var cgp = localStorage.getItem("cgp");
+                alert("Student Id  " +sid);
+                alert("Student Name " +sname);
+                alert("Cgp  " + cgp);
+            }
+        </script>
+    </head>
+<body>
+    <input type="button" value="Show" onclick="show()" />
+</body>
+</html>

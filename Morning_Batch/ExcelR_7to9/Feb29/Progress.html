@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var score=80;
+                document.getElementById("score").value = score;
+                // document.getElementById("myScore").innerHTML = "60";
+                if (score < 75) {
+                    document.getElementById("result").innerHTML="Fail";
+                } else {
+                    document.getElementById("result").innerHTML="Pass";
+                }
+            }
+        </script>
+    </head>
+<body onload="show()">
+    <div id="myScore">
+    Your Score : 
+    <progress id="score" max="100" /> <br/><br/>
+    
+    </div>
+    <div id="actual">
+    Actual Score : 
+    <progress id="actual" max="100" value="75" />
+</div>
+<div id="result">
+    <span id="result"></span>
+</div>
+</body>
+</html>
