@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var myArray = ["Hello", 5, function(){
+                    return "Sonix"
+                }, 
+                {sno:'1',sname:'SaiKumar'} 
+                ]
+            document.writeln("First Element is " +myArray[0] + "<br/>");
+            document.writeln("Second Element  " +myArray[1] + "<br/>");
+            document.writeln("Third Element is  " +myArray[2]() + "<Br/>");
+            document.writeln("Student No  " +myArray[3].sno + "<br/>");
+            document.writeln("Student Name  " +myArray[3].sname +"<br/>");
+            }
+        </script>
+    </head>
+<body onload="show()">
+
+</body>
+</html>

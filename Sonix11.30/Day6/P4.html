@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+             var questions = [
+                    "1. C Language Implemented By",
+                    "2. What is Object Oriented Programming...",
+                    "3. Javascript is compiled or Interpreted",
+                    "4. Is Sharepoint allows security",
+                    "5. What is JPA"
+                ]
+            questionNo = 0;
+            totalQuestions = questions.length;
+            function show() {
+               document.getElementById("question").innerHTML = questions[questionNo];
+               if (questionNo == 0) {
+                 document.getElementById("btnPrevious").style.display = "none";
+               } else {
+                document.getElementById("btnPrevious").style.display = "inline";
+               }
+               if (questionNo == totalQuestions - 1) {
+                document.getElementById("btnNext").style.display = "none";
+               } else {
+                document.getElementById("btnNext").style.display = "inline";
+               }
+            }
+            function prevQuestion() {
+                questionNo--;
+                if (questionNo < 0) {
+                    questionNo = 0;
+                    alert("No Questions Before this...");
+                }
+                show();
+            }
+            function nextQuestion() {
+                questionNo++;
+                if (questionNo == totalQuestions) {
+                    alert("No More Questions after this...")
+                    questionNo = totalQuestions - 1;
+                }
+                show();
+            }
+        </script>
+    </head>
+<body onload="show()">
+    <p id="question"></p> <br/>
+    <input type="button" id="btnNext" value="Next" onclick="nextQuestion()" /> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" id="btnPrevious" value="Previous" onclick="prevQuestion()" />
+</body>
+</html>

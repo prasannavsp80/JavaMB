@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <script>
+                var employs = ["Akhil-E001","Sai Kumar-E002","Bhavana-E003",
+                "Chakri-8482"];
+                var managers = ["Rajlakshmi","Jayanth","Sree","Mani"];
+        </script>
+    </head>
+<body>
+    <form name="frmLeave">
+        <table border="3" align="center">
+            <tr>
+                <th colspan="2">Leave Aplication</th>
+            </tr>
+            <tr>
+                <th>
+                    Employ Name/Id
+                </th>
+                <td>
+                    <select name="employ">
+                        <option value="select employ">Select Employ</option>
+                        <script>
+                            for(var v in employs) {
+                                document.writeln("<option value="+employs[v] + ">"+employs[v]+"</option>");
+                            }
+                           
+                        </script>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   Select Manager : 
+                </th>
+                <td>
+                    <select name="manager">
+                        <option value="select manager">Select Manager</option>
+                        <script>
+                        for(var v in managers) {
+                            document.writeln("<option value="+managers[v] + ">" +managers[v]+ "</option>");    
+                        }
+                        </script>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Leave-Start Date :
+                </th>
+                <td>
+                    <input type="date" name="leaveStartDate" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Leave-End Date : 
+                </th>
+                <td>
+                    <input type="date" name="leaveEndDate" />
+                </td>
+            </tr>
+            <tr>
+                <th>No.of Days</th>
+                <td>
+                    <input type="number" name="noOfDays" />
+                </td>
+            </tr>
+            <tr>
+                <th>Leave Type</th>
+                <td>
+                    <select name="leaveType">
+                        <option value="EL">EL</option>
+                        <option value="EL">PL</option>
+                        <option value="EL">ML</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Leave Status
+                </th>
+                <td>
+                    <select name="leaveStatus">
+                        <option value="PENDING">PENDING</option>
+                        <option value="ACCEPTED">ACCEPTED</option>
+                        <option value="REJECTED">REJECTED</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Applied On 
+                </th>
+                <td>
+                    <input type="text" name="appliedOn" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Manager Comments
+                </th>
+                <td>
+                    <input type="text" name="managerComments" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Apply Leave" />
+                </th>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
