@@ -1,0 +1,145 @@
+1) Which interface used to 
+remove duplicates 
+
+2) What is Diff. between 
+HashSet and LinkedHashSet 
+
+3) How to sort a List 
+
+4) What is Comparable interface
+
+5) what is the purpose of Comparator
+
+6) What is the default package in java
+
+7) List some methods in Object class 
+
+ 	toString()
+	equals()
+	hashCode()
+	getClass() 
+
+8) What is purpose of toString() 
+
+9) What is the purpose of hashCode() 
+
+public class Test {
+
+	public static void main(String[] args) {
+		int x;
+	    System.out.println(x);		
+	}
+}
+
+public class Test{
+   int x;
+   public static void main(String[] args) {
+	System.out.println(new Test().x));
+}
+
+public class Test {
+    static flag status;
+    public static void main(String[] args) {
+	System.out.println(status);
+    }
+}
+
+
+public class Test {
+    public static void main(String args) {
+	 int a=20,b=10,c=30;
+	 String str="Sam";
+	System.out.println(a+b+c+str); 60sam
+	System.out.println(a+str+b+c);	20sam1030
+        System.out.println(a+b+str+c);  30sam30
+   }
+}
+
+public class Test {
+    public static void main(String[] args) {
+	System.out.println("5"+3+8);  // 538
+	System.out.println("5"+(3+8)); // 511
+	System.out.println("5 +3" +8); // 5 +38
+    }
+}
+
+public class Tests {
+    public static void main(String[] args) {
+	int choice=10;
+	do {
+	   System.out.println("HI");
+	   choice--;
+	} while(choice <= 10);
+}
+
+public class Hello {
+     static {
+	 System.out.println("Hi");
+     }
+     Hello() {
+	System.out.println("Bye");
+     }
+     public static void main(String[] args) {
+	Hello  obj = new Hello();
+     }
+}
+
+class Hi {
+   static {
+	System.out.println("Test");
+   }
+}
+
+_______________________________________________________
+
+Generics : Generics provides an opportunity to define datatypes
+at runtime. 
+
+   -> if you want to make any method as write once and apply for all 
+types, then we need the help of generics. 
+
+Advantages :
+_____________
+
+	-> provides the security to the data
+
+	-> write once and apply for all types
+
+	-> No Typecasting Required
+
+        -> Reduces the size of the program. 
+
+Generics will be declared by using diamond symbol <T> 
+
+In Place of <T> we can pass any data types as value types/
+reference types or custom types. 
+
+Collections without generics are inadequate. 
+
+Example : 
+
+List names = new ArrayList();
+now names list contains any data that leads to inconsitency. 
+
+So to overcome this we need to ensure, it contains only strings, then
+
+List<String> names = new ArrayList<String>();
+
+then names list strictly contains only strings. 
+
+The striking of generics is code bloat, ensures
+it will generate relavant code in JVM based on
+values you are passed. 
+
+Java architecture
+Constructors
+Inheritance
+Abstract class
+interfaces
+static
+
+all topics theory to be prepared 
+
+
+
+
