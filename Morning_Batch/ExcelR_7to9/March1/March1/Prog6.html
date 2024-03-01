@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script>
+
+            var x=12;
+            function ExamCivil() {
+                this.examId = "E001";
+                this.examName = "Group 2";
+                this.location = "Entire State (TS)";
+            }
+            function Batch7() {
+                // alert("Hello");
+                this.loginTime = function() {
+                    alert("Moring 7 Am is Loggin Time...");
+                }
+                this.logOutTime = function() {
+                    alert("Loggging out at 9 PM...");
+                }
+                this.trainer = function() {
+                    alert("Trainer is Prasanna P...");
+                }
+            }
+            function showDetails() {
+                var application1 = new ExamCivil();
+                alert(application1.examId);
+                var objYamini = new Batch7();
+                objYamini.loginTime();
+                objYamini.logOutTime();
+                objYamini.trainer();
+
+                var objDeepanshu = new Batch7();
+                objDeepanshu.loginTime();
+                objDeepanshu.logOutTime();
+                objDeepanshu.trainer();
+            }
+        </script>
+    </head>
+<body onload="showDetails()">
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <script>
+        function Student(sid,name,gender,cgp) {
+            this.sid = sid;
+            this.name = name;
+            this.gender = gender;
+            this.cgp = cgp;
+        }
+        function show() {
+            var objKomal = new Student(1, "Komal", "Male", 8.9);
+            var objDeepanshu = new Student(2, "Deepanshu", "Male", 8.1);
+            var objVeena = new Student(3, "Veena", "Female", 9.1);
+            document.writeln("Student Id " +objKomal.sid + " Name " 
+                +objKomal.name + " Gender " +objKomal.gender + " Cgp  " +objKomal.cgp + "<br/>");
+        }
+    </script>
+<body onload="show()">
+
+</body>
+</html>
