@@ -1,8 +1,8 @@
-drop database if exists sonix
+drop database if exists sonix;
 
-create database sonix
+create database sonix;
 
-use sonix
+use sonix;
 
 create table dept(
   deptno int,
