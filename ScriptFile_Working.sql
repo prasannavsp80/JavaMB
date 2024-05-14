@@ -1,8 +1,8 @@
-drop database if exists infinite_december;
+drop database if exists sonix
 
-create database infinite_december;
+create database sonix
 
-use infinite_december;
+use sonix
 
 create table dept(
   deptno int,
