@@ -1,0 +1,88 @@
+
+
+Inner Join : Acts as intersect operator, used to extract only the common records from the given tables.
+
+select 
+from table1 INNER JOIN Table2 on table1.primarykey = table2.foreignkey
+
+
+Outer Join : There are various types of outer joins as
+
+1) Left-Outer : All records from the left-side table and matching records from the right-side table, if any child table value is not available, then it would be replaced with NULL keyword. 
+
+2) Right-Outer : All records from the right-side table and matching records from the left-side table, if any child table value not available, then it would be replaced with NULL keyword. 
+
+Cross Join : Generates cartician product of 2 given tables. As table A contains n records and table B contains m records, then it generates n * m records. 
+
+Self Join : if a table joins with itself known as self join. 
+
+Subquery : A subquery is a query, that which is having another query inside, the query which is inside known as inner query, the query which is outside known as outer query.  Everytime the result of the inner query will be send as input to the outer query. 
+
+Sometimes it is not possible to extract data by using single sql statement. To overcome this we need the help of subquery. A subquery is a query, that which have another query inside. 
+
+1) Display max. salary from Emp Table.
+
+select max(sal) from Emp;
+
+-- Display Employ name who is getting max. salary 
+
+
+select  ename,max(sal) from emp group by sal 
+having max(sal)
+order by max(sal) desc LIMIT 1;
+
+select ename from emp where sal =(select max(sal) from Emp);
+
+
+-- Display 2nd max. salary 
+
+select max(sal) from Emp where sal < 
+(select max(sal) from Emp);
+
+-- Display Employ Name who is getting 2nd max. salary 
+
+
+select ename from emp where sal =(
+select max(sal) from Emp where sal < 
+(select max(sal) from Emp));
+
+There are various types of subqueries as
+
+1) Single Row : If a subquery returns single row at at time known as single row subquery
+
+2) Multi Row : If a subquery returns more than 1 row known as multi row subquery. 
+
+We can handle them by using either ALL or ANY keywords.  
+
+ALL acts as AND operator
+
+ANY acts as OR operator
+
+
+empno <> ALL(10,20,30) means empno <> 20 ANd 30 and 10 
+
+empno = ANY(10,20,30) means empno = 10 or 20 or 30
+
+
+ 
+3) Correlated Subquery 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
