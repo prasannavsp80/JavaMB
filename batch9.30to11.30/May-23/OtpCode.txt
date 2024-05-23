@@ -1,0 +1,39 @@
+
+
+If subquery returns more than one row, we need to handle them by using 
+
+either all or any operators
+
+ALL acts as AND Operator
+
+ANY acts as OR operator 
+
+Empno <> ALL(10,20,30) means
+
+	Empno <> 10 AND Empno <> 20 AND Empno <> 30
+
+Empno = ANY(10,20,30) means
+
+	Empno=10 OR Empno=20 OR Empno=30    
+
+
+
+static char[] OTP() 
+    { 
+        System.out.println("Generating OTP using random() : "); 
+        System.out.print("You OTP is : "); 
+  
+        String numbers = "0123456789"; 
+        Random rndm_method = new Random(); 
+  
+        char[] otp = new char[6]; 
+  
+        for (int i = 0; i < 6; i++) 
+        { 
+             otp[i] = 
+             numbers.charAt(rndm_method.nextInt(numbers.length())); 
+        } 
+        return otp; 
+    } 
+
+
